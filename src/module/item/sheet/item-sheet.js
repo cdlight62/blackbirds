@@ -1,14 +1,14 @@
-import * as ZweihanderUtils from '../../utils';
+import * as BlackbirdsUtils from '../../utils';
 /**
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
  */
-export default class ZweihanderItemSheet extends ItemSheet {
+export default class BlackbirdsItemSheet extends ItemSheet {
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ['zweihander', 'sheet', 'item'],
-      template: 'systems/zweihander/src/templates/item/main.hbs',
+      classes: ['blackbirds', 'sheet', 'item'],
+      template: 'systems/blackbirds/src/templates/item/main.hbs',
       width: 400,
       height: 550,
       resizable: true,
@@ -53,7 +53,7 @@ export default class ZweihanderItemSheet extends ItemSheet {
     sheetData.owner = this.item.isOwner;
     sheetData.editable = this.isEditable;
     sheetData.rollData = this.item.getRollData.bind(this.item);
-    sheetData.settings = ZweihanderUtils.getSheetSettings();
+    sheetData.settings = BlackbirdsUtils.getSheetSettings();
     sheetData.actor = this.item.actor;
     sheetData.choices = {};
     if (sheetData.type === 'skill') {
@@ -64,7 +64,7 @@ export default class ZweihanderItemSheet extends ItemSheet {
       }));
     }
     if (sheetData.type === 'profession') {
-      sheetData.choices.archetypes = ZweihanderUtils.selectedChoice(
+      sheetData.choices.archetypes = BlackbirdsUtils.selectedChoice(
         sheetData.system.archetype ?? CONFIG.ZWEI.archetypes[0],
         CONFIG.ZWEI.archetypes.map((option) => ({
           value: option,
@@ -73,13 +73,13 @@ export default class ZweihanderItemSheet extends ItemSheet {
       );
     }
     if (sheetData.type === 'injury') {
-      sheetData.choices.severities = ZweihanderUtils.selectedChoice(
+      sheetData.choices.severities = BlackbirdsUtils.selectedChoice(
         sheetData.system.severity ?? 0,
         CONFIG.ZWEI.injurySeverities
       );
     }
     if (sheetData.type === 'weapon') {
-      const skillPack = game.packs.get(game.settings.get('zweihander', 'skillPack'));
+      const skillPack = game.packs.get(game.settings.get('blackbirds', 'skillPack'));
       sheetData.skills = (await skillPack.getDocuments()).map((x) => x.name).sort((a, b) => a.localeCompare(b));
     }
     return sheetData;
@@ -122,10 +122,10 @@ export default class ZweihanderItemSheet extends ItemSheet {
   }
 
   async _updateObject(event, formData) {
-    //@todo move to ZweihanderAncestry#update
+    //@todo move to BlackbirdsAncestry#update
     if (this.item.type === 'ancestry') {
       const trait = formData['system.ancestralTrait.name'];
-      const item = await ZweihanderUtils.findItemWorldWide('trait', trait);
+      const item = await BlackbirdsUtils.findItemWorldWide('trait', trait);
       if (item) {
         formData['system.ancestralTrait.name'] = item.name;
       }
@@ -144,7 +144,7 @@ export default class ZweihanderItemSheet extends ItemSheet {
     } else if (this.item.type === 'profession') {
       const profTrait = formData['system.professionalTrait.name'];
       let item;
-      item = await ZweihanderUtils.findItemWorldWide('trait', profTrait);
+      item = await BlackbirdsUtils.findItemWorldWide('trait', profTrait);
       if (item) {
         formData['system.professionalTrait.name'] = item.name;
       }
@@ -161,7 +161,7 @@ export default class ZweihanderItemSheet extends ItemSheet {
         }
       }
       const specTrait = formData['system.specialTrait.name'];
-      item = await ZweihanderUtils.findItemWorldWide('trait', specTrait);
+      item = await BlackbirdsUtils.findItemWorldWide('trait', specTrait);
       if (item) {
         formData['system.specialTrait.name'] = item.name;
       }
@@ -178,7 +178,7 @@ export default class ZweihanderItemSheet extends ItemSheet {
         }
       }
       const drawback = formData['system.drawback.name'];
-      item = await ZweihanderUtils.findItemWorldWide('drawback', drawback);
+      item = await BlackbirdsUtils.findItemWorldWide('drawback', drawback);
       if (item) {
         formData['system.drawback.name'] = item.name;
       }
@@ -286,13 +286,13 @@ export default class ZweihanderItemSheet extends ItemSheet {
 
   async validateTalent(talent) {
     const item = this.item;
-    if (item.system?.talents?.some((t) => ZweihanderUtils.normalizedEquals(t.name, talent))) {
+    if (item.system?.talents?.some((t) => BlackbirdsUtils.normalizedEquals(t.name, talent))) {
       ui?.notifications.warn(
         `A Talent named "${talent}" already belongs to item "${item.name}" of type "${item.type}". Skill Ranks must be unique!`
       );
       return;
     }
-    const foundItem = await ZweihanderUtils.findItemWorldWide('talent', talent);
+    const foundItem = await BlackbirdsUtils.findItemWorldWide('talent', talent);
     if (foundItem) {
       return { name: foundItem.name };
     } else {
@@ -311,13 +311,13 @@ export default class ZweihanderItemSheet extends ItemSheet {
 
   async validateSkillRank(skillRank) {
     const item = this.item;
-    if (item.system?.skillRanks?.some((sr) => ZweihanderUtils.normalizedEquals(sr.name, skillRank))) {
+    if (item.system?.skillRanks?.some((sr) => BlackbirdsUtils.normalizedEquals(sr.name, skillRank))) {
       ui?.notifications.warn(
         `A Skill Rank in "${skillRank}" already belongs to item "${item.name}" of type "${item.type}". Skill Ranks must be unique!`
       );
       return;
     }
-    const foundItem = await ZweihanderUtils.findItemWorldWide('skill', skillRank);
+    const foundItem = await BlackbirdsUtils.findItemWorldWide('skill', skillRank);
     if (foundItem) {
       return { name: foundItem.name };
     } else {

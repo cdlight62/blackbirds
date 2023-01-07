@@ -28,11 +28,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.T1QZAroTeLdi8CTe"
+      "sourceId": "Compendium.blackbirds.weapons.T1QZAroTeLdi8CTe"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/spears.svg",
+  "img": "systems/blackbirds/assets/icons/spears.svg",
   "name": "Pike",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

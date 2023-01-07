@@ -1,6 +1,6 @@
-import * as ZweihanderUtils from '../../utils';
+import * as BlackbirdsUtils from '../../utils';
 
-export default class ZweihanderBaseItem {
+export default class BlackbirdsBaseItem {
   static linkedSingleProperties = [];
 
   static linkedListProperties = [];
@@ -10,10 +10,10 @@ export default class ZweihanderBaseItem {
 
   static linkedItemEntryCreationProcessor =
     (source) =>
-    async (property, itemType, entryPostProcessor = ZweihanderBaseItem.cleanLinkedItemEntry) => {
+    async (property, itemType, entryPostProcessor = BlackbirdsBaseItem.cleanLinkedItemEntry) => {
       const itemName = source.system[property].name.trim();
       if (itemName) {
-        const linkedItemEntry = await ZweihanderBaseItem.getLinkedItemEntry(
+        const linkedItemEntry = await BlackbirdsBaseItem.getLinkedItemEntry(
           source.parent,
           itemName,
           itemType,
@@ -29,10 +29,10 @@ export default class ZweihanderBaseItem {
 
   static linkedItemEntriesCreationProcessor =
     (source) =>
-    async (property, itemType, entryPostProcessor = ZweihanderBaseItem.cleanLinkedItemEntry) => {
+    async (property, itemType, entryPostProcessor = BlackbirdsBaseItem.cleanLinkedItemEntry) => {
       const itemNames = source.system[property].map((v) => v.name);
       if (itemNames.length) {
-        const linkedItemEntries = await ZweihanderBaseItem.getLinkedItemEntries(
+        const linkedItemEntries = await BlackbirdsBaseItem.getLinkedItemEntries(
           source.parent,
           itemNames,
           itemType,
@@ -50,13 +50,13 @@ export default class ZweihanderBaseItem {
 
   static linkedItemEntryUpdateProcessor =
     (source, changed) =>
-    async (property, itemType, entryPostProcessor = ZweihanderBaseItem.cleanLinkedItemEntry) => {
+    async (property, itemType, entryPostProcessor = BlackbirdsBaseItem.cleanLinkedItemEntry) => {
       if (changed.system[property]?.name !== undefined) {
         const newPropertyName = changed.system[property].name.trim();
         const oldPropertyName = source.system[property].name;
         if (newPropertyName !== oldPropertyName) {
           const idToDelete = source.system[property].linkedId;
-          const entry = await ZweihanderBaseItem.getLinkedItemEntry(
+          const entry = await BlackbirdsBaseItem.getLinkedItemEntry(
             source.parent,
             newPropertyName,
             itemType,
@@ -71,13 +71,13 @@ export default class ZweihanderBaseItem {
 
   static linkedItemEntriesUpdateProcessor =
     (source, changed) =>
-    async (property, itemType, entryPostProcessor = ZweihanderBaseItem.cleanLinkedItemEntry) => {
+    async (property, itemType, entryPostProcessor = BlackbirdsBaseItem.cleanLinkedItemEntry) => {
       if (changed.system[property] !== undefined) {
-        const { idsToDelete, namesToAdd } = ZweihanderBaseItem.getLinkedItemsDifference(
+        const { idsToDelete, namesToAdd } = BlackbirdsBaseItem.getLinkedItemsDifference(
           changed.system[property],
           source.system[property]
         );
-        const addedEntries = await ZweihanderBaseItem.getLinkedItemEntries(
+        const addedEntries = await BlackbirdsBaseItem.getLinkedItemEntries(
           source.parent,
           namesToAdd,
           itemType,
@@ -93,7 +93,7 @@ export default class ZweihanderBaseItem {
     };
 
   static async getLinkedItemEntry(actor, itemName, itemType, sourceName, sourceType) {
-    const itemToCreate = (await ZweihanderUtils.findItemWorldWide(itemType, itemName))?.toObject?.();
+    const itemToCreate = (await BlackbirdsUtils.findItemWorldWide(itemType, itemName))?.toObject?.();
     const existingItemWithSameName = actor.items.find((t) => t.type === itemType && t.name === itemToCreate?.name);
     const notFoundValue = { linkedId: null, name: itemName };
     if (!itemToCreate && !existingItemWithSameName) return notFoundValue;
@@ -102,7 +102,7 @@ export default class ZweihanderBaseItem {
       label: `${sourceName} (${sourceType.capitalize()})`,
     };
     if (existingItemWithSameName) {
-      const existingFlag = existingItemWithSameName.getFlag('zweihander', 'source');
+      const existingFlag = existingItemWithSameName.getFlag('blackbirds', 'source');
       if (existingFlag) {
         ui?.notifications.warn(
           `The ${existingItemWithSameName.type.capitalize()} "${
@@ -113,13 +113,13 @@ export default class ZweihanderBaseItem {
         );
         return notFoundValue;
       }
-      await existingItemWithSameName.setFlag('zweihander', 'source', flag);
+      await existingItemWithSameName.setFlag('blackbirds', 'source', flag);
       return {
         linkedId: existingItemWithSameName.id,
         name: existingItemWithSameName.name,
       };
     } else {
-      setProperty(itemToCreate, 'flags.zweihander.source', flag);
+      setProperty(itemToCreate, 'flags.blackbirds.source', flag);
       return {
         linkedId: itemToCreate._id,
         itemToCreate,
@@ -159,8 +159,8 @@ export default class ZweihanderBaseItem {
     if (!this.constructor.linkedListProperties.length && !this.constructor.linkedSingleProperties.length) {
       return;
     }
-    const processMultiLinkedPropertyDiff = ZweihanderBaseItem.linkedItemEntriesCreationProcessor(item);
-    const processSingleLinkedPropertyDiff = ZweihanderBaseItem.linkedItemEntryCreationProcessor(item);
+    const processMultiLinkedPropertyDiff = BlackbirdsBaseItem.linkedItemEntriesCreationProcessor(item);
+    const processSingleLinkedPropertyDiff = BlackbirdsBaseItem.linkedItemEntryCreationProcessor(item);
     const itemsToCreate = (
       await Promise.all(
         this.constructor.linkedListProperties.map(({ property, itemType, entryPostProcessor }) =>
@@ -194,8 +194,8 @@ export default class ZweihanderBaseItem {
     if (!this.constructor.linkedListProperties.length && !this.constructor.linkedSingleProperties.length) {
       return;
     }
-    const processMultiLinkedPropertyDiff = ZweihanderBaseItem.linkedItemEntriesUpdateProcessor(item, changed);
-    const processSingleLinkedPropertyDiff = ZweihanderBaseItem.linkedItemEntryUpdateProcessor(item, changed);
+    const processMultiLinkedPropertyDiff = BlackbirdsBaseItem.linkedItemEntriesUpdateProcessor(item, changed);
+    const processSingleLinkedPropertyDiff = BlackbirdsBaseItem.linkedItemEntryUpdateProcessor(item, changed);
     const entries = (
       await Promise.all(
         this.constructor.linkedListProperties.map(({ property, itemType, entryPostProcessor }) =>
@@ -241,7 +241,7 @@ export default class ZweihanderBaseItem {
       });
     }
     if (options.idsToDelete?.length) {
-      await ZweihanderBaseItem.removeLinkedItems(item.parent, options.idsToDelete);
+      await BlackbirdsBaseItem.removeLinkedItems(item.parent, options.idsToDelete);
     }
   }
 
@@ -259,7 +259,7 @@ export default class ZweihanderBaseItem {
   }
 
   async _onDelete(options, user, item) {
-    await ZweihanderBaseItem.removeLinkedItems(item.parent, options.idsToDelete);
+    await BlackbirdsBaseItem.removeLinkedItems(item.parent, options.idsToDelete);
   }
 
   getRollData(rollData) {

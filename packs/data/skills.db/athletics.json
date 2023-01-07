@@ -11,11 +11,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.skills.hjgW4irPosptLkzJ"
+      "sourceId": "Compendium.blackbirds.skills.hjgW4irPosptLkzJ"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/skills.svg",
+  "img": "systems/blackbirds/assets/icons/skills.svg",
   "name": "Athletics",
   "permission": {
     "9cw85KJ7nPukNIXd": 3,

@@ -28,11 +28,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.nSwnOeo2m921HkU7"
+      "sourceId": "Compendium.blackbirds.weapons.nSwnOeo2m921HkU7"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/warhammer.svg",
+  "img": "systems/blackbirds/assets/icons/warhammer.svg",
   "name": "War hammer",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

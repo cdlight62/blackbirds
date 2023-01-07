@@ -11,11 +11,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.skills.KONlE6aqHb8b9oSz"
+      "sourceId": "Compendium.blackbirds.skills.KONlE6aqHb8b9oSz"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/skills.svg",
+  "img": "systems/blackbirds/assets/icons/skills.svg",
   "name": "Navigation",
   "permission": {
     "9cw85KJ7nPukNIXd": 3,

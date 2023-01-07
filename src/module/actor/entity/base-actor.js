@@ -1,4 +1,4 @@
-export default class ZweihanderBaseActor {
+export default class BlackbirdsBaseActor {
   getRollData(rollData) {
     //TODO: make attributes more accessible here
     return rollData;
@@ -14,7 +14,7 @@ export default class ZweihanderBaseActor {
 
   async _preCreate(actor, options, user, that) {
     // add default set of skills
-    const skillPack = game.packs.get(game.settings.get('zweihander', 'skillPack'));
+    const skillPack = game.packs.get(game.settings.get('blackbirds', 'skillPack'));
     const skillsFromPack = (await skillPack.getDocuments()).map((i) => i.toObject());
     await that.updateSource({ items: skillsFromPack }, { keepId: true, keepEmbeddedIds: true });
   }

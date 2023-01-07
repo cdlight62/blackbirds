@@ -11,11 +11,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.skills.UNFh9yee0TsL0ysu"
+      "sourceId": "Compendium.blackbirds.skills.UNFh9yee0TsL0ysu"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/skills.svg",
+  "img": "systems/blackbirds/assets/icons/skills.svg",
   "name": "Simple Ranged",
   "permission": {
     "9cw85KJ7nPukNIXd": 3,

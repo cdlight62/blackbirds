@@ -11,11 +11,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.skills.LMsGrCOYhW3TFza6"
+      "sourceId": "Compendium.blackbirds.skills.LMsGrCOYhW3TFza6"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/skills.svg",
+  "img": "systems/blackbirds/assets/icons/skills.svg",
   "name": "Scrutinize",
   "permission": {
     "9cw85KJ7nPukNIXd": 3,

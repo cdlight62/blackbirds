@@ -28,11 +28,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.Smer2GdCqmSGuYPh"
+      "sourceId": "Compendium.blackbirds.weapons.Smer2GdCqmSGuYPh"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/card-joker.svg",
+  "img": "systems/blackbirds/assets/icons/card-joker.svg",
   "name": "Improvised hand weapon",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

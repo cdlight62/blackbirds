@@ -28,11 +28,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.NrP6XfHB8j08YMlz"
+      "sourceId": "Compendium.blackbirds.weapons.NrP6XfHB8j08YMlz"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/broadsword.svg",
+  "img": "systems/blackbirds/assets/icons/broadsword.svg",
   "name": "Court sword",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

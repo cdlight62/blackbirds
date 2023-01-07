@@ -1,4 +1,4 @@
-export default class ZweihanderActiveEffect extends ActiveEffect {
+export default class BlackbirdsActiveEffect extends ActiveEffect {
   isActive = true;
 
   apply(actor, change) {

@@ -8,7 +8,7 @@
   },
   "folder": null,
   "formula": "1d26",
-  "img": "systems/zweihander/assets/icons/armor-downgrade.svg",
+  "img": "systems/blackbirds/assets/icons/armor-downgrade.svg",
   "name": "Character Creation Drawbacks",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,
@@ -18,10 +18,10 @@
   "results": [
     {
       "_id": "ffJwPLrXh1QSJHaK",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         1,
         1
@@ -35,10 +35,10 @@
     },
     {
       "_id": "HmCfHieRcva2tQEg",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         2,
         2
@@ -52,10 +52,10 @@
     },
     {
       "_id": "XHU3CWfst9AFJUvh",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         3,
         3
@@ -69,10 +69,10 @@
     },
     {
       "_id": "qZ4Mwi4XWFtqGSAp",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         4,
         4
@@ -86,10 +86,10 @@
     },
     {
       "_id": "ZdM0yuZNzH6K4uAY",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         5,
         5
@@ -103,10 +103,10 @@
     },
     {
       "_id": "PnF0gZdeqXaxZtLO",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         6,
         6
@@ -120,10 +120,10 @@
     },
     {
       "_id": "1XwErlL4XMFAHOQv",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         7,
         7
@@ -137,10 +137,10 @@
     },
     {
       "_id": "8V9RvzizxFVcoq4b",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         8,
         8
@@ -154,10 +154,10 @@
     },
     {
       "_id": "taizBAk3r8YLw9i3",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         9,
         9
@@ -171,10 +171,10 @@
     },
     {
       "_id": "qXhedkc8rvdfK3ED",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         10,
         10
@@ -188,10 +188,10 @@
     },
     {
       "_id": "qw5XfsRkmFuZw818",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         11,
         11
@@ -205,10 +205,10 @@
     },
     {
       "_id": "IwMhNLrPuCsKGrOt",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         12,
         12
@@ -222,10 +222,10 @@
     },
     {
       "_id": "VZ4QzSaFIuGoCRar",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         13,
         13
@@ -239,10 +239,10 @@
     },
     {
       "_id": "QO71Pjm2JMkWbjUt",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         14,
         14
@@ -256,10 +256,10 @@
     },
     {
       "_id": "rHaINVfOvviFMWr4",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         15,
         15
@@ -273,10 +273,10 @@
     },
     {
       "_id": "bBqPo0U2ginNKO94",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         16,
         16
@@ -290,10 +290,10 @@
     },
     {
       "_id": "3RdkjbgpUTweKI9o",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         17,
         17
@@ -307,10 +307,10 @@
     },
     {
       "_id": "sKT3c4FimMc1yLPW",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         18,
         18
@@ -324,10 +324,10 @@
     },
     {
       "_id": "knptLzEXJEzbcHai",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         19,
         19
@@ -341,10 +341,10 @@
     },
     {
       "_id": "us8VuUgJFRXToYw8",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         20,
         20
@@ -358,10 +358,10 @@
     },
     {
       "_id": "qyMV2P4hhniQUVY1",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         21,
         21
@@ -375,10 +375,10 @@
     },
     {
       "_id": "rg9BhhvEhUGzueBs",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         22,
         22
@@ -392,10 +392,10 @@
     },
     {
       "_id": "Lv9De55bYUHJ8PR0",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         23,
         23
@@ -409,10 +409,10 @@
     },
     {
       "_id": "qtxgtfIarw8YUlN4",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         24,
         24
@@ -426,10 +426,10 @@
     },
     {
       "_id": "Uhu7BGYeEY7UjxDJ",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         25,
         25
@@ -443,10 +443,10 @@
     },
     {
       "_id": "bbLJBWsWvf7BsoZK",
-      "collection": "zweihander.zh-drawbacks",
+      "collection": "blackbirds.zh-drawbacks",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/spiked-halo.svg",
+      "img": "systems/blackbirds/assets/icons/spiked-halo.svg",
       "range": [
         26,
         26

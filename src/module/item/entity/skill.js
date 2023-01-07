@@ -1,7 +1,7 @@
-import ZweihanderBaseItem from './base-item';
-import * as ZweihanderUtils from '../../utils';
+import BlackbirdsBaseItem from './base-item';
+import * as BlackbirdsUtils from '../../utils';
 
-export default class ZweihanderSkill extends ZweihanderBaseItem {
+export default class BlackbirdsSkill extends BlackbirdsBaseItem {
   prepareBaseData(item) {
     if (!item.isOwned || !item?.actor?.system) return;
     const actor = item.actor;

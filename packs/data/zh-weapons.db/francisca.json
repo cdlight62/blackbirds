@@ -28,11 +28,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.Xx7zqwPehIaScvUk"
+      "sourceId": "Compendium.blackbirds.weapons.Xx7zqwPehIaScvUk"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/axe-swing.svg",
+  "img": "systems/blackbirds/assets/icons/axe-swing.svg",
   "name": "Francisca",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

@@ -28,11 +28,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.eb7Uygi9cTCFctNA"
+      "sourceId": "Compendium.blackbirds.weapons.eb7Uygi9cTCFctNA"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/thrown-knife.svg",
+  "img": "systems/blackbirds/assets/icons/thrown-knife.svg",
   "name": "Throwing knife",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

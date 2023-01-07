@@ -1,1 +1,1 @@
-export default class ZweihanderCombat extends Combat {}
+export default class BlackbirdsCombat extends Combat {}

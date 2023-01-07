@@ -11,11 +11,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.skills.hZHVZPkdR70iUkYK"
+      "sourceId": "Compendium.blackbirds.skills.hZHVZPkdR70iUkYK"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/skills.svg",
+  "img": "systems/blackbirds/assets/icons/skills.svg",
   "name": "Counterfeit",
   "permission": {
     "9cw85KJ7nPukNIXd": 3,

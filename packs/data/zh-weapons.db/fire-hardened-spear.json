@@ -28,11 +28,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.aQG00onDKVHlrWFR"
+      "sourceId": "Compendium.blackbirds.weapons.aQG00onDKVHlrWFR"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/stone-spear.svg",
+  "img": "systems/blackbirds/assets/icons/stone-spear.svg",
   "name": "Fire-hardened spear",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

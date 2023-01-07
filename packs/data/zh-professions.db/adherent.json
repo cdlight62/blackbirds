@@ -96,12 +96,12 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.professions.FTvKmUMeBLS5eeQH"
+      "sourceId": "Compendium.blackbirds.professions.FTvKmUMeBLS5eeQH"
     },
-    "zweihander": {}
+    "blackbirds": {}
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/adherent.svg",
+  "img": "systems/blackbirds/assets/icons/adherent.svg",
   "name": "Adherent",
   "permission": {
     "9cw85KJ7nPukNIXd": 3,

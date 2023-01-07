@@ -1,6 +1,6 @@
-import ZweihanderActorConfig from '../../apps/actor-config';
-import ZweihanderBaseActorSheet from './base-actor-sheet';
-import * as ZweihanderDice from '../../dice';
+import BlackbirdsActorConfig from '../../apps/actor-config';
+import BlackbirdsBaseActorSheet from './base-actor-sheet';
+import * as BlackbirdsDice from '../../dice';
 import { attachTabDefinitions, getItemGroups } from './character-sheet-tabs-def';
 import { getPacks } from '../../utils';
 
@@ -8,7 +8,7 @@ import { getPacks } from '../../utils';
  * The Zweihänder actor sheet class for characters.
  * @extends {ActorSheet}
  */
-export default class ZweihanderCharacterSheet extends ZweihanderBaseActorSheet {
+export default class BlackbirdsCharacterSheet extends BlackbirdsBaseActorSheet {
   constructor(...args) {
     super(...args);
   }
@@ -18,7 +18,7 @@ export default class ZweihanderCharacterSheet extends ZweihanderBaseActorSheet {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: super.defaultOptions.classes.concat(['character']),
-      template: 'systems/zweihander/src/templates/character/main.hbs',
+      template: 'systems/blackbirds/src/templates/character/main.hbs',
       width: 770,
       height: 900,
       tabs: [
@@ -35,11 +35,11 @@ export default class ZweihanderCharacterSheet extends ZweihanderBaseActorSheet {
   getData(options) {
     const sheetData = super.getData();
     // get actor config
-    sheetData.actorConfig = ZweihanderActorConfig.getConfig(this.actor);
+    sheetData.actorConfig = BlackbirdsActorConfig.getConfig(this.actor);
     // bind currency
-    sheetData.settings.currencies = game.settings.get('zweihander', 'currencySettings');
+    sheetData.settings.currencies = game.settings.get('blackbirds', 'currencySettings');
     // calculate reward points automatically
-    sheetData.settings.trackRewardPoints = game.settings.get('zweihander', 'trackRewardPoints');
+    sheetData.settings.trackRewardPoints = game.settings.get('blackbirds', 'trackRewardPoints');
     if (sheetData.settings.trackRewardPoints) {
       const tierMultiplier = {
         Basic: 100,
@@ -203,8 +203,8 @@ export default class ZweihanderCharacterSheet extends ZweihanderBaseActorSheet {
     const addSource = (items) =>
       items.map((i) => ({
         ...i,
-        source: i.flags.zweihander?.source?.label ?? 'Manual',
-        isManualSource: i.flags.zweihander?.source?.label ? false : true,
+        source: i.flags.blackbirds?.source?.label ?? 'Manual',
+        isManualSource: i.flags.blackbirds?.source?.label ? false : true,
       }));
     sheetData.drawbacks = addSource(sheetData.drawbacks);
     sheetData.traits = addSource(sheetData.traits);
@@ -307,8 +307,8 @@ export default class ZweihanderCharacterSheet extends ZweihanderBaseActorSheet {
     });
 
     html.find('.peril-rolls .image-container').click(async (event) => {
-      const perilType = ZweihanderDice.PERIL_ROLL_TYPES[event.currentTarget.dataset.perilType.toUpperCase()];
-      ZweihanderDice.rollPeril(perilType, this.actor);
+      const perilType = BlackbirdsDice.PERIL_ROLL_TYPES[event.currentTarget.dataset.perilType.toUpperCase()];
+      BlackbirdsDice.rollPeril(perilType, this.actor);
     });
 
     // Modify numerable value by clicking '+' and '-' buttons on sheet, e.g. quantity, encumbrance

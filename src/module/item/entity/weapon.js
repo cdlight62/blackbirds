@@ -1,8 +1,8 @@
-import ZweihanderBaseItem from './base-item';
+import BlackbirdsBaseItem from './base-item';
 import { rollTest } from '../../dice';
 import { getItemRollConfiguration } from '../../apps/test-config';
 
-export default class ZweihanderWeapon extends ZweihanderBaseItem {
+export default class BlackbirdsWeapon extends BlackbirdsBaseItem {
   async _preUpdate(changed, options, user, item) {
     if (changed.system['equipped'] !== undefined) {
       changed.system.equipped = changed.system.equipped && item.system.carried;

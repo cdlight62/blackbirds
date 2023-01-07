@@ -1,6 +1,6 @@
-import ZweihanderBaseItem from './base-item';
+import BlackbirdsBaseItem from './base-item';
 
-export default class ZweihanderArmor extends ZweihanderBaseItem {
+export default class BlackbirdsArmor extends BlackbirdsBaseItem {
   async _preUpdate(changed, options, user, item) {
     if (changed.system['equipped'] !== undefined) {
       changed.system.equipped = changed.system.equipped && item.system.carried;

@@ -1,6 +1,6 @@
-import ZweihanderBaseItem from './base-item';
+import BlackbirdsBaseItem from './base-item';
 
-export default class ZweihanderProfession extends ZweihanderBaseItem {
+export default class BlackbirdsProfession extends BlackbirdsBaseItem {
   static async toggleProfessionPurchases(profession, purchase) {
     const updateData = {};
     const updatePurchase = (itemType) =>
@@ -19,7 +19,7 @@ export default class ZweihanderProfession extends ZweihanderBaseItem {
     {
       property: 'talents',
       itemType: 'talent',
-      entryPostProcessor: (x) => ZweihanderBaseItem.addPurchaseInfo(ZweihanderBaseItem.cleanLinkedItemEntry(x)),
+      entryPostProcessor: (x) => BlackbirdsBaseItem.addPurchaseInfo(BlackbirdsBaseItem.cleanLinkedItemEntry(x)),
     },
   ];
 

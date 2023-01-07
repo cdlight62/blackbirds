@@ -28,11 +28,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.93L0vdmD2Ff3SxPT"
+      "sourceId": "Compendium.blackbirds.weapons.93L0vdmD2Ff3SxPT"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/musket.svg",
+  "img": "systems/blackbirds/assets/icons/musket.svg",
   "name": "Arquebus",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

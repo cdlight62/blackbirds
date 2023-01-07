@@ -424,9 +424,9 @@ export async function updateActorSkillsFromPack(skillPackId) {
   const skillPack = game.packs.get(skillPackId);
   if (!skillPack) {
     ui.notifications.error(
-      `Can't find compendium pack identified by "${skillPackId}"! Resetting Skill List to "zweihander.skills"...`
+      `Can't find compendium pack identified by "${skillPackId}"! Resetting Skill List to "blackbirds.skills"...`
     );
-    game.settings.set('zweihander', 'skillPack', 'zweihander.skills');
+    game.settings.set('blackbirds', 'skillPack', 'blackbirds.skills');
     return;
   }
   const skillsFromPack = (await skillPack.getDocuments()).map((item) => item.toObject());
@@ -450,7 +450,7 @@ export function selectedChoice(value, choices) {
 }
 
 export function getSheetSettings() {
-  const gameSystem = game.settings.get('zweihander', 'gameSystem');
+  const gameSystem = game.settings.get('blackbirds', 'gameSystem');
   return {
     gameSystem,
   };
@@ -469,12 +469,12 @@ const _getPacks = (gameSystem, actorType) => (itemType) => {
 };
 
 export function getPacks(actorType, itemType) {
-  const gameSystem = game.settings.get('zweihander', 'gameSystem');
+  const gameSystem = game.settings.get('blackbirds', 'gameSystem');
   return _getPacks(gameSystem, actorType)(itemType);
 }
 
 export function assignPacks(actorType, itemGroups) {
-  const gameSystem = game.settings.get('zweihander', 'gameSystem');
+  const gameSystem = game.settings.get('blackbirds', 'gameSystem');
   const getPacks = _getPacks(gameSystem, actorType);
   Object.values(itemGroups).forEach((x) => (x.packs = getPacks(x.type)));
   return itemGroups;

@@ -28,11 +28,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.yKqB5eZpcy3grI7a"
+      "sourceId": "Compendium.blackbirds.weapons.yKqB5eZpcy3grI7a"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/wizard-staff.svg",
+  "img": "systems/blackbirds/assets/icons/wizard-staff.svg",
   "name": "Staff",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

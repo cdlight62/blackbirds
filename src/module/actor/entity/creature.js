@@ -1,7 +1,7 @@
-import ZweihanderBaseActor from './base-actor';
-import * as ZweihanderUtils from '../../utils';
+import BlackbirdsBaseActor from './base-actor';
+import * as BlackbirdsUtils from '../../utils';
 
-export default class ZweihanderCreature extends ZweihanderBaseActor {
+export default class BlackbirdsCreature extends BlackbirdsBaseActor {
   prepareDerivedData(actor) {
     Object.values(actor.system.stats.primaryAttributes).forEach(
       (a) => (a.bonus = a.bonusAdvances + Math.floor(a.value / 10))
@@ -29,7 +29,7 @@ export default class ZweihanderCreature extends ZweihanderBaseActor {
 
   getItem(actor, type, name, strict = false) {
     return actor.items.find(
-      (i) => i.type === type && (strict ? i.name === name : ZweihanderUtils.normalizedEquals(i.name, name))
+      (i) => i.type === type && (strict ? i.name === name : BlackbirdsUtils.normalizedEquals(i.name, name))
     );
   }
 

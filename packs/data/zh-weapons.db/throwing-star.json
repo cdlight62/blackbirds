@@ -29,17 +29,17 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.zhsrNYy85cpVBVw0"
+      "sourceId": "Compendium.blackbirds.weapons.zhsrNYy85cpVBVw0"
     },
     "exportSource": {
       "coreVersion": "0.8.9",
-      "system": "zweihander",
+      "system": "blackbirds",
       "systemVersion": "0.3.30",
       "world": "talron2"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/north-star-shuriken.svg",
+  "img": "systems/blackbirds/assets/icons/north-star-shuriken.svg",
   "name": "Throwing Star",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

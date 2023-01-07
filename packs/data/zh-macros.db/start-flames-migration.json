@@ -1,7 +1,7 @@
 {
   "_id": "k9oOuaZFvmQ1YfUr",
   "author": "JyjuBRFhP4y9QWxg",
-  "command": "game.zweihander.migrateFlames()",
+  "command": "game.blackbirds.migrateFlames()",
   "flags": {
     "core": {
       "sourceId": "Macro.SXOyS13a17pm0agq"

@@ -1,14 +1,14 @@
 export const triggerAnalytics = async () => {
   if (game.user.isGM) {
-    const systemId = game.settings.get('zweihander', 'systemId');
+    const systemId = game.settings.get('blackbirds', 'systemId');
     if (systemId === '') {
-      await Promise.all(game.messages.filter((x) => x.flags?.zweihander?.analytics).map((x) => x.delete()));
+      await Promise.all(game.messages.filter((x) => x.flags?.blackbirds?.analytics).map((x) => x.delete()));
       await ChatMessage.create({
         speaker: ChatMessage.getSpeaker({ alias: 'F&H Development' }),
         flavor: 'Wants to create premium content for this system and needs your help',
         flags: {
-          zweihander: {
-            img: 'systems/zweihander/assets/icons/informer.svg',
+          blackbirds: {
+            img: 'systems/blackbirds/assets/icons/informer.svg',
             analytics: {},
           },
         },
@@ -40,7 +40,7 @@ export const triggerAnalytics = async () => {
 };
 
 export const sendAnalytics = () => {
-  const systemId = game.settings.get('zweihander', 'systemId');
+  const systemId = game.settings.get('blackbirds', 'systemId');
   const url = `https://kxfin.xyz/zh-analytics.php?id=${systemId}&version=${game.system.version}`;
   fetch(url, { method: 'GET' });
   console.info(`Sending system id: "${systemId}" & version: "${game.system.version}" data to ${url}.`);

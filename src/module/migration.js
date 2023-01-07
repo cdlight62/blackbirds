@@ -2,7 +2,7 @@ import { ZWEI } from './config';
 
 export const migrateWorld = async (forceSystemPacks = false) => {
   ui.notifications.info(
-    `Applying Zweihander System Migration for version ${game.system.version}. Please be patient and do not close your game or shut down your server.`,
+    `Applying Blackbirds System Migration for version ${game.system.version}. Please be patient and do not close your game or shut down your server.`,
     { permanent: true }
   );
   // Migrate World Actors
@@ -14,7 +14,7 @@ export const migrateWorld = async (forceSystemPacks = false) => {
         await a.update(updateData, { enforceTypes: false });
       }
     } catch (err) {
-      err.message = `Failed Zweihander system migration for Actor ${a.name}: ${err.message}`;
+      err.message = `Failed Blackbirds system migration for Actor ${a.name}: ${err.message}`;
       console.error(err);
     }
   }
@@ -28,7 +28,7 @@ export const migrateWorld = async (forceSystemPacks = false) => {
         await i.update(updateData, { enforceTypes: false });
       }
     } catch (err) {
-      err.message = `Failed Zweihander system migration for Item ${i.name}: ${err.message}`;
+      err.message = `Failed Blackbirds system migration for Item ${i.name}: ${err.message}`;
       console.error(err);
     }
   }
@@ -44,7 +44,7 @@ export const migrateWorld = async (forceSystemPacks = false) => {
         s.tokens.forEach((t) => (t._actor = null));
       }
     } catch (err) {
-      err.message = `Failed Zweihander system migration for Scene ${s.name}: ${err.message}`;
+      err.message = `Failed Blackbirds system migration for Scene ${s.name}: ${err.message}`;
       console.error(err);
     }
   }
@@ -57,8 +57,8 @@ export const migrateWorld = async (forceSystemPacks = false) => {
   }
 
   // Set the migration as complete
-  game.settings.set('zweihander', 'systemMigrationVersion', game.system.version);
-  ui.notifications.info(`Zweihander System Migration to version ${game.system.version} completed!`, {
+  game.settings.set('blackbirds', 'systemMigrationVersion', game.system.version);
+  ui.notifications.info(`Blackbirds System Migration to version ${game.system.version} completed!`, {
     permanent: true,
   });
 };
@@ -93,7 +93,7 @@ const migrateCompendium = async (pack) => {
       console.log(`Migrated ${entity} entity ${doc.name} in Compendium ${pack.collection}`);
     } catch (err) {
       // Handle migration failures
-      err.message = `Failed Zweihander system migration for entity ${doc.name} in pack ${pack.collection}: ${err.message}`;
+      err.message = `Failed Blackbirds system migration for entity ${doc.name} in pack ${pack.collection}: ${err.message}`;
       console.error(err);
     }
   }
@@ -350,19 +350,19 @@ const migrateIcons = (document) => {
 
 export const migrateWorldSafe = async () => {
   if (!game.user.isGM) return;
-  const currentVersion = game.settings.get('zweihander', 'systemMigrationVersion');
+  const currentVersion = game.settings.get('blackbirds', 'systemMigrationVersion');
   const NEEDS_MIGRATION_VERSION = '4.2.3-beta2f';
   const COMPATIBLE_MIGRATION_VERSION = '4.2.0';
   const totalDocuments = game.actors.size + game.scenes.size + game.items.size;
   if (!currentVersion && totalDocuments === 0)
-    return game.settings.set('zweihander', 'systemMigrationVersion', game.system.version);
+    return game.settings.set('blackbirds', 'systemMigrationVersion', game.system.version);
   const needsMigration = !currentVersion || isNewerVersion(NEEDS_MIGRATION_VERSION, currentVersion);
   if (!needsMigration) return;
 
   // Perform the migration
   if (currentVersion && isNewerVersion(COMPATIBLE_MIGRATION_VERSION, currentVersion)) {
     const warning =
-      'Your Zweihander system data is from too old a Foundry version and cannot be reliably migrated to the latest version. The process will be attempted, but errors may occur.';
+      'Your Blackbirds system data is from too old a Foundry version and cannot be reliably migrated to the latest version. The process will be attempted, but errors may occur.';
     ui.notifications.error(warning, { permanent: true });
   }
   await migrateWorld();

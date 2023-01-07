@@ -1,9 +1,9 @@
 import FortuneTracker from './apps/fortune-tracker';
-import ZweihanderQuality from './item/entity/quality';
-import * as ZweihanderUtils from './utils';
+import BlackbirdsQuality from './item/entity/quality';
+import * as BlackbirdsUtils from './utils';
 import { getTestConfiguration } from './apps/test-config';
 import { ZWEI } from './config';
-import ZweihanderActorConfig from './apps/actor-config';
+import BlackbirdsActorConfig from './apps/actor-config';
 
 export const PERIL_ROLL_TYPES = {
   STRESS: { x: 1, title: 'Stress', difficultyRating: 20 },
@@ -50,11 +50,11 @@ export async function rollPeril(perilType, actor) {
 }
 
 export async function rollCombatReaction(type, enemyActorId, enemyTestConfiguration) {
-  const actor = game.actors.get(ZweihanderUtils.determineCurrentActorId(true));
+  const actor = game.actors.get(BlackbirdsUtils.determineCurrentActorId(true));
   if (!actor) return;
   const associatedSkill = actor.system.stats.secondaryAttributes[type].associatedSkill;
   const skillItem = actor.items.find(
-    (i) => ZweihanderUtils.normalizedEquals(i.name, associatedSkill) && i.type === 'skill'
+    (i) => BlackbirdsUtils.normalizedEquals(i.name, associatedSkill) && i.type === 'skill'
   );
   const originalActorName = game.actors.get(enemyActorId).name;
   const updatedTestConfiguration = {
@@ -119,7 +119,7 @@ export async function rollTest(
   const rawDifficultyRating = Number(testConfiguration.difficultyRating);
   const channelPowerBonus = testConfiguration.channelPowerBonus;
   const difficultyRating = Math.min(30, rawDifficultyRating + (testConfiguration.channelPowerBonus || 0));
-  const difficultyRatingLabel = ZweihanderUtils.getDifficultyRatingLabel(difficultyRating);
+  const difficultyRatingLabel = BlackbirdsUtils.getDifficultyRatingLabel(difficultyRating);
   let totalChance = baseChance + difficultyRating;
   totalChance = (totalChance >= 100 ? 99 : totalChance < 1 ? 1 : totalChance).toLocaleString(undefined, {
     minimumIntegerDigits: 2,
@@ -176,11 +176,11 @@ export async function rollTest(
   if (spell) {
     templateData.itemId = spell.id;
     templateData.spell = spell.toObject(false);
-    templateData.spell.system.distance = await ZweihanderUtils.parseDataPaths(
+    templateData.spell.system.distance = await BlackbirdsUtils.parseDataPaths(
       templateData.spell.system.distance,
       actor
     );
-    templateData.spell.system.duration = await ZweihanderUtils.parseDataPaths(
+    templateData.spell.system.duration = await BlackbirdsUtils.parseDataPaths(
       templateData.spell.system.duration,
       actor
     );
@@ -208,7 +208,7 @@ export async function rollTest(
   const speaker = ChatMessage.getSpeaker({ actor });
   const rollMode = ZWEI.testModes[testConfiguration.testMode].rollMode;
   const flags = {
-    zweihander: {
+    blackbirds: {
       skillTestData: {
         actorId: actor.id,
         skillItemId: skillItem.id,
@@ -221,9 +221,9 @@ export async function rollTest(
   let sound;
   if (['dodge', 'parry'].includes(testType)) {
     if (isSuccess(effectiveOutcome)) {
-      sound = ZweihanderActorConfig.getValue(actor, `${testType}Sound`);
-    } else if (ZweihanderActorConfig.getValue(actor, 'playGruntSound')) {
-      sound = ZweihanderActorConfig.getValue(actor, `gruntSound`);
+      sound = BlackbirdsActorConfig.getValue(actor, `${testType}Sound`);
+    } else if (BlackbirdsActorConfig.getValue(actor, 'playGruntSound')) {
+      sound = BlackbirdsActorConfig.getValue(actor, `gruntSound`);
     }
   }
   let messageData = await roll.toMessage({ content, flavor, speaker, flags, sound }, { rollMode, create });
@@ -241,7 +241,7 @@ export async function rollWeaponDamage(actorId, testConfiguration) {
   const { weaponId, additionalFuryDice } = testConfiguration;
   const actor = game.actors.get(actorId);
   const weapon = actor.items.get(weaponId).toObject(false);
-  const formula = ZweihanderUtils.abbreviations2DataPath(
+  const formula = BlackbirdsUtils.abbreviations2DataPath(
     weapon.system.damage.formula.replace('[#]', additionalFuryDice || 0)
   );
   const damageRoll = await new Roll(formula, actor.system).evaluate();
@@ -249,7 +249,7 @@ export async function rollWeaponDamage(actorId, testConfiguration) {
   const flavor = `Determines ${weapon.name}'s Damage`;
   const content = await getWeaponDamageContent(weapon, damageRoll);
   const flags = {
-    zweihander: {
+    blackbirds: {
       weaponTestData: {
         actorId,
         weaponId,
@@ -261,9 +261,9 @@ export async function rollWeaponDamage(actorId, testConfiguration) {
 }
 
 async function getWeaponDamageContent(weapon, roll, exploded = false, explodedCount = 0) {
-  weapon.system.qualities = await ZweihanderQuality.getQualities(weapon.system.qualities.value);
+  weapon.system.qualities = await BlackbirdsQuality.getQualities(weapon.system.qualities.value);
   const rollContent = await roll.render({ flavor: 'Fury Die' });
-  const cardContent = await renderTemplate('systems/zweihander/src/templates/item-card/item-card-weapon.hbs', weapon);
+  const cardContent = await renderTemplate('systems/blackbirds/src/templates/item-card/item-card-weapon.hbs', weapon);
   return await renderTemplate(CONFIG.ZWEI.templates.weapon, {
     cardContent,
     rollContent,
@@ -284,7 +284,7 @@ export async function explodeWeaponDamage(message, useFortune) {
     ui.notifications.warn(`Couldn't reroll skill test: There are no ${useFortune} points left.`);
     return;
   }
-  const { actorId, weaponId, exploded } = message.flags.zweihander.weaponTestData;
+  const { actorId, weaponId, exploded } = message.flags.blackbirds.weaponTestData;
   const actor = game.actors.get(actorId);
   const weapon = actor.items.get(weaponId).toObject(false);
   const roll = message.rolls[0];
@@ -308,11 +308,11 @@ export async function explodeWeaponDamage(message, useFortune) {
   }
   const content = await getWeaponDamageContent(weapon, roll, useFortune, exploded + 1);
   const diffData = {
-    'flags.zweihander.weaponTestData.exploded': exploded + 1,
+    'flags.blackbirds.weaponTestData.exploded': exploded + 1,
     content: content,
     rolls: [roll.toJSON()],
   };
-  await game.zweihander.socket.executeAsGM('updateChatMessage', message.id, diffData);
+  await game.blackbirds.socket.executeAsGM('updateChatMessage', message.id, diffData);
 }
 
 export function isSuccess(outcome) {

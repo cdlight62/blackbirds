@@ -9,7 +9,7 @@
   },
   "folder": null,
   "formula": "1d12",
-  "img": "systems/zweihander/assets/icons/back-pain.svg",
+  "img": "systems/blackbirds/assets/icons/back-pain.svg",
   "name": "Moderate Injuries",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,
@@ -22,7 +22,7 @@
       "collection": null,
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/shamrock.svg",
+      "img": "systems/blackbirds/assets/icons/shamrock.svg",
       "range": [
         1,
         1
@@ -36,10 +36,10 @@
     },
     {
       "_id": "eZTSgNLqCMfkaXTu",
-      "collection": "zweihander.zh-injuries",
+      "collection": "blackbirds.zh-injuries",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/tired-eye.svg",
+      "img": "systems/blackbirds/assets/icons/tired-eye.svg",
       "range": [
         2,
         2
@@ -53,10 +53,10 @@
     },
     {
       "_id": "MnN7Ag8w6qaEzEek",
-      "collection": "zweihander.zh-injuries",
+      "collection": "blackbirds.zh-injuries",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/ribcage.svg",
+      "img": "systems/blackbirds/assets/icons/ribcage.svg",
       "range": [
         3,
         3
@@ -70,10 +70,10 @@
     },
     {
       "_id": "9M77glWeLzd2nylA",
-      "collection": "zweihander.zh-injuries",
+      "collection": "blackbirds.zh-injuries",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/arm-bandage.svg",
+      "img": "systems/blackbirds/assets/icons/arm-bandage.svg",
       "range": [
         4,
         4
@@ -87,10 +87,10 @@
     },
     {
       "_id": "EHpP1jow2qxwX8yP",
-      "collection": "zweihander.zh-injuries",
+      "collection": "blackbirds.zh-injuries",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/arm-sling.svg",
+      "img": "systems/blackbirds/assets/icons/arm-sling.svg",
       "range": [
         5,
         5
@@ -104,10 +104,10 @@
     },
     {
       "_id": "nukuAQPxtKR7hz2f",
-      "collection": "zweihander.zh-injuries",
+      "collection": "blackbirds.zh-injuries",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/fingernail.svg",
+      "img": "systems/blackbirds/assets/icons/fingernail.svg",
       "range": [
         6,
         6
@@ -121,10 +121,10 @@
     },
     {
       "_id": "8UUJzyBezjJxukkD",
-      "collection": "zweihander.zh-injuries",
+      "collection": "blackbirds.zh-injuries",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/back-pain.svg",
+      "img": "systems/blackbirds/assets/icons/back-pain.svg",
       "range": [
         7,
         7
@@ -138,10 +138,10 @@
     },
     {
       "_id": "kHQG6s8Axh76YvXX",
-      "collection": "zweihander.zh-injuries",
+      "collection": "blackbirds.zh-injuries",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/brain-dump.svg",
+      "img": "systems/blackbirds/assets/icons/brain-dump.svg",
       "range": [
         8,
         8
@@ -155,10 +155,10 @@
     },
     {
       "_id": "TcJcL8XvXcRIemde",
-      "collection": "zweihander.zh-injuries",
+      "collection": "blackbirds.zh-injuries",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/hand-bandage.svg",
+      "img": "systems/blackbirds/assets/icons/hand-bandage.svg",
       "range": [
         9,
         9
@@ -172,10 +172,10 @@
     },
     {
       "_id": "oUyVtmZ9AQSoqZXz",
-      "collection": "zweihander.zh-injuries",
+      "collection": "blackbirds.zh-injuries",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/back-pain.svg",
+      "img": "systems/blackbirds/assets/icons/back-pain.svg",
       "range": [
         10,
         10
@@ -189,10 +189,10 @@
     },
     {
       "_id": "Yf43iyJkriTYXwSV",
-      "collection": "zweihander.zh-injuries",
+      "collection": "blackbirds.zh-injuries",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/foot-plaster.svg",
+      "img": "systems/blackbirds/assets/icons/foot-plaster.svg",
       "range": [
         11,
         11
@@ -206,10 +206,10 @@
     },
     {
       "_id": "rtPr45ynudauWQhB",
-      "collection": "zweihander.zh-gm-tables",
+      "collection": "blackbirds.zh-gm-tables",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/internal-injury.svg",
+      "img": "systems/blackbirds/assets/icons/internal-injury.svg",
       "range": [
         12,
         12

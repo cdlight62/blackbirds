@@ -1,8 +1,8 @@
-import ZweihanderBaseItem from './base-item';
+import BlackbirdsBaseItem from './base-item';
 import { rollTest } from '../../dice';
 import { getItemRollConfiguration } from '../../apps/test-config';
 
-export default class ZweihanderSpell extends ZweihanderBaseItem {
+export default class BlackbirdsSpell extends BlackbirdsBaseItem {
   async roll(item) {
     const { skillItem, additionalConfiguration } = getItemRollConfiguration(item);
 

@@ -29,17 +29,17 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.vXkDgJXjF6oEReM7"
+      "sourceId": "Compendium.blackbirds.weapons.vXkDgJXjF6oEReM7"
     },
     "exportSource": {
       "coreVersion": "0.8.9",
-      "system": "zweihander",
+      "system": "blackbirds",
       "systemVersion": "0.3.30",
       "world": "talron2"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/american-football-ball.svg",
+  "img": "systems/blackbirds/assets/icons/american-football-ball.svg",
   "name": "Pigskin",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

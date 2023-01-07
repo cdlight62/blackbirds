@@ -11,11 +11,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.skills.eQCI6vWuH0MxJ0F9"
+      "sourceId": "Compendium.blackbirds.skills.eQCI6vWuH0MxJ0F9"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/skills.svg",
+  "img": "systems/blackbirds/assets/icons/skills.svg",
   "name": "Drive",
   "permission": {
     "9cw85KJ7nPukNIXd": 3,

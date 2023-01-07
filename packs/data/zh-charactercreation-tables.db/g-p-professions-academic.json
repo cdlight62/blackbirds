@@ -5,7 +5,7 @@
     "createdTime": null,
     "lastModifiedBy": "5vFvLMyCloE0U6VX",
     "modifiedTime": 1667813916975,
-    "systemId": "zweihander",
+    "systemId": "blackbirds",
     "systemVersion": "5.0.1"
   },
   "description": "",
@@ -16,7 +16,7 @@
     },
     "exportSource": {
       "coreVersion": "9.255",
-      "system": "zweihander",
+      "system": "blackbirds",
       "systemVersion": "4.3.0",
       "world": "aeon-of-cinders"
     }
@@ -33,11 +33,11 @@
   "results": [
     {
       "_id": "T66vBt8w60tvGUCs",
-      "documentCollection": "zweihander.zh-professions",
+      "documentCollection": "blackbirds.zh-professions",
       "documentId": "dPmhU1YMHkXMG2Wu",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/adherent.svg",
+      "img": "systems/blackbirds/assets/icons/adherent.svg",
       "range": [
         1,
         6
@@ -48,11 +48,11 @@
     },
     {
       "_id": "ZPGiHdtPwxx7VqbE",
-      "documentCollection": "zweihander.zh-professions",
+      "documentCollection": "blackbirds.zh-professions",
       "documentId": "t6uRo8fjVkuOpYgL",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/anchorite.svg",
+      "img": "systems/blackbirds/assets/icons/anchorite.svg",
       "range": [
         7,
         13
@@ -63,11 +63,11 @@
     },
     {
       "_id": "ctqXEqmeRFB3XHBP",
-      "documentCollection": "zweihander.zh-professions",
+      "documentCollection": "blackbirds.zh-professions",
       "documentId": "mMjlBmM8pWAnlxak",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/antiquarian.svg",
+      "img": "systems/blackbirds/assets/icons/antiquarian.svg",
       "range": [
         14,
         20
@@ -78,11 +78,11 @@
     },
     {
       "_id": "p6op28THNsTgEpXf",
-      "documentCollection": "zweihander.zh-professions",
+      "documentCollection": "blackbirds.zh-professions",
       "documentId": "rNNmXhciyYskIbrJ",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/apothecary.svg",
+      "img": "systems/blackbirds/assets/icons/apothecary.svg",
       "range": [
         21,
         27
@@ -93,11 +93,11 @@
     },
     {
       "_id": "utQhaaE9wkJoNRlR",
-      "documentCollection": "zweihander.zh-professions",
+      "documentCollection": "blackbirds.zh-professions",
       "documentId": "d2j4pbRTuyDZnaVF",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/astrologer.svg",
+      "img": "systems/blackbirds/assets/icons/astrologer.svg",
       "range": [
         28,
         34
@@ -108,11 +108,11 @@
     },
     {
       "_id": "t4eSWxlLbZT2mS47",
-      "documentCollection": "zweihander.zh-professions",
+      "documentCollection": "blackbirds.zh-professions",
       "documentId": "42UvXIlRmNaUqxJ1",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/diabolist.svg",
+      "img": "systems/blackbirds/assets/icons/diabolist.svg",
       "range": [
         35,
         41
@@ -123,11 +123,11 @@
     },
     {
       "_id": "cfBIpLMbZ7zzzPeo",
-      "documentCollection": "zweihander.zh-professions",
+      "documentCollection": "blackbirds.zh-professions",
       "documentId": "4bDFfrWAV5YDLcGG",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/engineer.svg",
+      "img": "systems/blackbirds/assets/icons/engineer.svg",
       "range": [
         42,
         47
@@ -138,11 +138,11 @@
     },
     {
       "_id": "FiVTi8Q8oXwRARr3",
-      "documentCollection": "zweihander.zh-professions",
+      "documentCollection": "blackbirds.zh-professions",
       "documentId": "zpiadJQ82qOpcwhU",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/full-folder.svg",
+      "img": "systems/blackbirds/assets/icons/full-folder.svg",
       "range": [
         48,
         54
@@ -153,11 +153,11 @@
     },
     {
       "_id": "kxuSU4cco4vkoQyP",
-      "documentCollection": "zweihander.zh-professions",
+      "documentCollection": "blackbirds.zh-professions",
       "documentId": "QIHRzRD0AuE47I6d",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/informer.svg",
+      "img": "systems/blackbirds/assets/icons/informer.svg",
       "range": [
         55,
         61
@@ -168,11 +168,11 @@
     },
     {
       "_id": "Go0nfYHcaqB2h0gR",
-      "documentCollection": "zweihander.zh-professions",
+      "documentCollection": "blackbirds.zh-professions",
       "documentId": "F86QXGM3NI6fyUTg",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/investigator.svg",
+      "img": "systems/blackbirds/assets/icons/investigator.svg",
       "range": [
         62,
         68
@@ -183,11 +183,11 @@
     },
     {
       "_id": "AdmRh6zt4E88M5qd",
-      "documentCollection": "zweihander.zh-professions",
+      "documentCollection": "blackbirds.zh-professions",
       "documentId": "G5XtOImPJ6WTsdjU",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/monk.svg",
+      "img": "systems/blackbirds/assets/icons/monk.svg",
       "range": [
         69,
         75
@@ -198,11 +198,11 @@
     },
     {
       "_id": "AVuVk3n3kGM0ZlMC",
-      "documentCollection": "zweihander.zh-professions",
+      "documentCollection": "blackbirds.zh-professions",
       "documentId": "7yJQZLcSLsxPtmKA",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/newspaper.svg",
+      "img": "systems/blackbirds/assets/icons/newspaper.svg",
       "range": [
         76,
         82
@@ -213,11 +213,11 @@
     },
     {
       "_id": "xIlaU7w3USuS5ud3",
-      "documentCollection": "zweihander.zh-professions",
+      "documentCollection": "blackbirds.zh-professions",
       "documentId": "7SIcvv9DFMDllGj1",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/preacher.svg",
+      "img": "systems/blackbirds/assets/icons/preacher.svg",
       "range": [
         83,
         89
@@ -228,11 +228,11 @@
     },
     {
       "_id": "AHkGrCggcPBnv94b",
-      "documentCollection": "zweihander.zh-professions",
+      "documentCollection": "blackbirds.zh-professions",
       "documentId": "drp0LRnRNLvcsE12",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/barrel.svg",
+      "img": "systems/blackbirds/assets/icons/barrel.svg",
       "range": [
         90,
         95
@@ -243,11 +243,11 @@
     },
     {
       "_id": "nRtqnUy7CU7OwsMg",
-      "documentCollection": "zweihander.zh-professions",
+      "documentCollection": "blackbirds.zh-professions",
       "documentId": "l2UeXRBOYthOu61d",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/scribe.svg",
+      "img": "systems/blackbirds/assets/icons/scribe.svg",
       "range": [
         96,
         100

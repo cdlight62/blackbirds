@@ -2,12 +2,12 @@
   --zh-text-shadow: 2px 2px 2px var(--zh-clr-fg4);
 }
 
-body.game.vtt.system-zweihander {
-  .zweihander-theme-gruvbox-dark .zweihander.sheet .window-content {
+body.game.vtt.system-blackbirds {
+  .blackbirds-theme-gruvbox-dark .blackbirds.sheet .window-content {
     background-image: none;
   }
 
-  .zweihander-theme-gruvbox-light .zweihander.sheet .window-content {
+  .blackbirds-theme-gruvbox-light .blackbirds.sheet .window-content {
     background-image: none;
   }
 
@@ -15,11 +15,11 @@ body.game.vtt.system-zweihander {
     border: none !important;
   }
 
-  .zweihander .tabs .item.active {
+  .blackbirds .tabs .item.active {
     color: var(--zh-clr-fg0);
   }
 
-  .zweihander.sheet {
+  .blackbirds.sheet {
     ::placeholder {
       color: var(--zh-clr-fg4);
     }
@@ -56,7 +56,7 @@ body.game.vtt.system-zweihander {
       }
     }
 
-    button.zweihander-button {
+    button.blackbirds-button {
       background: var(--zh-clr-aqua-alt);
       color: var(--zh-clr-bg0);
       border: 1px solid var(--zh-clr-aqua);
@@ -99,7 +99,7 @@ body.game.vtt.system-zweihander {
     //   }
     // }
 
-    input[type='checkbox'].zweihander-checkbox {
+    input[type='checkbox'].blackbirds-checkbox {
       appearance: none;
       display: none;
       & + label {

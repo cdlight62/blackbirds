@@ -1,6 +1,6 @@
-import ZweihanderBaseItem from './base-item';
+import BlackbirdsBaseItem from './base-item';
 
-export default class ZweihanderTrapping extends ZweihanderBaseItem {
+export default class BlackbirdsTrapping extends BlackbirdsBaseItem {
   async _preUpdate(changed, options, user, item) {
     if (changed.system['carried'] !== undefined) {
       changed.system.carried = changed.system.carried && item.system.quantity >= 1;

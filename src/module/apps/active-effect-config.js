@@ -1,6 +1,6 @@
-export default class ZweihanderActiveEffectConfig extends ActiveEffectConfig {
+export default class BlackbirdsActiveEffectConfig extends ActiveEffectConfig {
   static get defaultOptions() {
-    const classes = ['zweihander'];
+    const classes = ['blackbirds'];
 
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes,
@@ -11,7 +11,7 @@ export default class ZweihanderActiveEffectConfig extends ActiveEffectConfig {
   getData() {
     const data = super.getData();
 
-    console.log('getDATA @ ZweihanderActiveEffectConfig', data);
+    console.log('getDATA @ BlackbirdsActiveEffectConfig', data);
 
     return data;
   }

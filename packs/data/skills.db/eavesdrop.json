@@ -11,11 +11,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.skills.y5hb3qmMF41dAFlL"
+      "sourceId": "Compendium.blackbirds.skills.y5hb3qmMF41dAFlL"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/skills.svg",
+  "img": "systems/blackbirds/assets/icons/skills.svg",
   "name": "Eavesdrop",
   "permission": {
     "9cw85KJ7nPukNIXd": 3,

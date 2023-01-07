@@ -1,13 +1,13 @@
 import { formDataToArray } from '../utils';
 
-export default class ZweihanderLanguageConfig extends FormApplication {
+export default class BlackbirdsLanguageConfig extends FormApplication {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      template: 'systems/zweihander/src/templates/app/language-config.hbs',
+      template: 'systems/blackbirds/src/templates/app/language-config.hbs',
       popOut: true,
       minimizable: false,
       resizable: false,
-      classes: ['zweihander', 'language-config'],
+      classes: ['blackbirds', 'language-config'],
       width: 400,
       height: 'auto',
       submitOnChange: true,

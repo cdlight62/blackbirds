@@ -1,11 +1,11 @@
-import ZweihanderBaseActor from './base-actor';
-import * as ZweihanderUtils from '../../utils';
-import ZweihanderActorConfig from '../../apps/actor-config';
+import BlackbirdsBaseActor from './base-actor';
+import * as BlackbirdsUtils from '../../utils';
+import BlackbirdsActorConfig from '../../apps/actor-config';
 
-export default class ZweihanderPC extends ZweihanderBaseActor {
+export default class BlackbirdsPC extends BlackbirdsBaseActor {
   // changed by re4xn from 'prepareDerivedData' on 19-05-2022
   prepareBaseData(actor) {
-    const configOptions = ZweihanderActorConfig.getConfig(actor);
+    const configOptions = BlackbirdsActorConfig.getConfig(actor);
     // set up utility variables
     const systemData = actor.system;
     systemData.tier = CONFIG.ZWEI.tiers[actor.items.filter((i) => i.type === 'profession').length];
@@ -15,7 +15,7 @@ export default class ZweihanderPC extends ZweihanderBaseActor {
     const ancestry = actor.items.find((i) => i.type === 'ancestry');
     const applyBonusModifiers = (list, mod, source) =>
       list?.forEach?.((a) => {
-        const attr = ZweihanderUtils.primaryAttributeMapping[a.slice(1, 2)];
+        const attr = BlackbirdsUtils.primaryAttributeMapping[a.slice(1, 2)];
         //TODO should be safe to remove this after migration of existing data
         if (!attr) {
           ui?.notifications?.warn(`"${a.trim()}" is not a valid primary attribute bonus abbreviation in ${source}!`);
@@ -54,7 +54,7 @@ export default class ZweihanderPC extends ZweihanderBaseActor {
     // according to the rule book, this doesn't stack, so we choose the maximium!
     // to account for shields with "maker's mark" quality, we need to implement active effects
     const maxEquippedArmor =
-      equippedArmor?.[ZweihanderUtils.argMax(equippedArmor.map((a) => a.system.damageThresholdModifier))];
+      equippedArmor?.[BlackbirdsUtils.argMax(equippedArmor.map((a) => a.system.damageThresholdModifier))];
     const damageModifier = maxEquippedArmor?.system?.damageThresholdModifier ?? 0;
     sa.damageThreshold.value = systemData.stats.primaryAttributes[configOptions.dthAttribute].bonus + damageModifier;
     // active effects tracking Proof of Concept
@@ -73,7 +73,7 @@ export default class ZweihanderPC extends ZweihanderBaseActor {
     const carriedTrappings = actor.items.filter(
       (i) => ['trapping', 'armor', 'weapon'].includes(i.type) && i.system.carried
     );
-    const nine4one = game.settings.get('zweihander', 'encumbranceNineForOne');
+    const nine4one = game.settings.get('blackbirds', 'encumbranceNineForOne');
     const smallTrappingsEnc = !nine4one
       ? 0
       : Math.floor(
@@ -112,7 +112,7 @@ export default class ZweihanderPC extends ZweihanderBaseActor {
   // parry, dodge & magick depend on Item preparation being finished
   prepareEmbeddedDocuments(actor) {
     const noWarn = CONFIG.ZWEI.NO_WARN || actor._id === null;
-    const configOptions = ZweihanderActorConfig.getConfig(actor);
+    const configOptions = BlackbirdsActorConfig.getConfig(actor);
     const systemData = actor.system;
 
     // get peril malus
@@ -170,7 +170,7 @@ export default class ZweihanderPC extends ZweihanderBaseActor {
     const oldDamage = actor.system.stats.secondaryAttributes.damageCurrent.value;
     const newDamage = changed.system?.stats?.secondaryAttributes?.damageCurrent?.value;
 
-    const injurySettingEnabled = game.settings.get('zweihander', 'injuryPrompt');
+    const injurySettingEnabled = game.settings.get('blackbirds', 'injuryPrompt');
 
     if (injurySettingEnabled && newDamage !== undefined && newDamage < oldDamage && newDamage > 0 && newDamage <= 3) {
       let injuryToRoll = newDamage == 3 ? 'Moderate' : newDamage == 2 ? 'Serious' : 'Grievous';
@@ -202,10 +202,10 @@ export default class ZweihanderPC extends ZweihanderBaseActor {
 
     if (!injurySustained) return;
 
-    const tablesPack = game.packs.get('zweihander.zh-gm-tables');
+    const tablesPack = game.packs.get('blackbirds.zh-gm-tables');
     const tablesIndex = await tablesPack.getIndex();
 
-    const injuryTableEntry = tablesIndex.find((table) => ZweihanderUtils.normalizedIncludes(table.name, injuryToRoll));
+    const injuryTableEntry = tablesIndex.find((table) => BlackbirdsUtils.normalizedIncludes(table.name, injuryToRoll));
 
     const injuryTable = await tablesPack.getDocument(injuryTableEntry._id);
 

@@ -1,6 +1,6 @@
-import ZweihanderBaseItem from './base-item';
+import BlackbirdsBaseItem from './base-item';
 
-export default class ZweihanderInjury extends ZweihanderBaseItem {
+export default class BlackbirdsInjury extends BlackbirdsBaseItem {
   async _preCreate(item, options, user, that) {
     await super._preCreate(item, options, user);
 

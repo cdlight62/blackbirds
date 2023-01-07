@@ -2,7 +2,7 @@ export default class FortuneTracker extends Application {
   static INSTANCE = undefined;
 
   static get PARAMS() {
-    const size = game.settings.get('zweihander', 'fortuneTrackerSettings').size;
+    const size = game.settings.get('blackbirds', 'fortuneTrackerSettings').size;
     switch (size) {
       case 'compact':
         return {
@@ -47,13 +47,13 @@ export default class FortuneTracker extends Application {
 
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      template: 'systems/zweihander/src/templates/app/fortune-tracker.hbs',
+      template: 'systems/blackbirds/src/templates/app/fortune-tracker.hbs',
       popOut: true,
       minimizable: false,
       resizable: false,
       title: 'Fortune Tracker',
       id: 'fortuneTrackerApp',
-      classes: ['zweihander'],
+      classes: ['blackbirds'],
       width: FortuneTracker.PARAMS.areaSize * 2,
       height: FortuneTracker.PARAMS.areaSize + 40,
       top: 150,
@@ -100,7 +100,7 @@ export default class FortuneTracker extends Application {
   }
 
   get removeUsedMisfortune() {
-    return game.settings.get('zweihander', 'fortuneTrackerSettings').removeUsedMisfortune;
+    return game.settings.get('blackbirds', 'fortuneTrackerSettings').removeUsedMisfortune;
   }
 
   get state() {
@@ -118,7 +118,7 @@ export default class FortuneTracker extends Application {
     this.#waiting = false;
     this.#state = updatedState;
     if (game.users.get(game.userId).isGM) {
-      game.settings.set('zweihander', 'fortuneTrackerPersistedState', updatedState);
+      game.settings.set('blackbirds', 'fortuneTrackerPersistedState', updatedState);
     }
     this.render(!this.closable);
   }
@@ -202,7 +202,7 @@ export default class FortuneTracker extends Application {
   validate(updatedState, requestingUserId) {
     // console.log(this.state);
     // console.log(updatedState);
-    const notifySetting = game.settings.get('zweihander', 'fortuneTrackerSettings').notifications;
+    const notifySetting = game.settings.get('blackbirds', 'fortuneTrackerSettings').notifications;
     const user = game.users.get(requestingUserId);
     if (updatedState.total !== this.total && !user.isGM) {
       return 'You are not privileged to change the total amount of fortune in the game!';
@@ -280,12 +280,12 @@ export default class FortuneTracker extends Application {
       fortune: {
         value: this.fortune,
         positions: fortunePositions,
-        path: game.settings.get('zweihander', 'fortuneTrackerSettings').fortunePath,
+        path: game.settings.get('blackbirds', 'fortuneTrackerSettings').fortunePath,
       },
       misfortune: {
         value: this.misfortune,
         positions: misfortunePositions,
-        path: game.settings.get('zweihander', 'fortuneTrackerSettings').misfortunePath,
+        path: game.settings.get('blackbirds', 'fortuneTrackerSettings').misfortunePath,
       },
       waiting: this.#waiting,
       params: FortuneTracker.PARAMS,
@@ -294,7 +294,7 @@ export default class FortuneTracker extends Application {
 
   async syncState() {
     if (game.users.get(game.userId).isGM) {
-      this.#state = game.settings.get('zweihander', 'fortuneTrackerPersistedState');
+      this.#state = game.settings.get('blackbirds', 'fortuneTrackerPersistedState');
       this.#waiting = false;
       this.#socket.executeForOthers('broadcastState', this.state);
     } else {
@@ -420,7 +420,7 @@ export default class FortuneTracker extends Application {
   playAudio() {
     AudioHelper.play(
       {
-        src: 'systems/zweihander/assets/sounds/coins.mp3',
+        src: 'systems/blackbirds/assets/sounds/coins.mp3',
         volume: 0.5,
         loop: false,
       },

@@ -28,11 +28,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.UsP8i8Xiqo1HRUpQ"
+      "sourceId": "Compendium.blackbirds.weapons.UsP8i8Xiqo1HRUpQ"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/fire-axe.svg",
+  "img": "systems/blackbirds/assets/icons/fire-axe.svg",
   "name": "Woodman's axe",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

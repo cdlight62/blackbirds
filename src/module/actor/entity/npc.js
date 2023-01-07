@@ -1,4 +1,4 @@
-import ZweihanderCreature from './creature';
-import * as ZweihanderUtils from '../../utils';
+import BlackbirdsCreature from './creature';
+import * as BlackbirdsUtils from '../../utils';
 
-export default class ZweihanderNPC extends ZweihanderCreature {}
+export default class BlackbirdsNPC extends BlackbirdsCreature {}

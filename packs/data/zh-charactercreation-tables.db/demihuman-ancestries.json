@@ -5,7 +5,7 @@
   "flags": {},
   "folder": null,
   "formula": "1d5",
-  "img": "systems/zweihander/assets/icons/ancestry.svg",
+  "img": "systems/blackbirds/assets/icons/ancestry.svg",
   "name": "Demihuman Ancestries",
   "permission": {
     "4be9WK4Hp7jWrwWe": 3,
@@ -15,10 +15,10 @@
   "results": [
     {
       "_id": "vi87czxpwjegkmw9",
-      "collection": "zweihander.zh-ancestries",
+      "collection": "blackbirds.zh-ancestries",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/family-tree.svg",
+      "img": "systems/blackbirds/assets/icons/family-tree.svg",
       "range": [
         1,
         1
@@ -32,10 +32,10 @@
     },
     {
       "_id": "5cpittvpngfkkdfy",
-      "collection": "zweihander.zh-ancestries",
+      "collection": "blackbirds.zh-ancestries",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/family-tree.svg",
+      "img": "systems/blackbirds/assets/icons/family-tree.svg",
       "range": [
         2,
         2
@@ -49,10 +49,10 @@
     },
     {
       "_id": "al00bl84h7pa3d10",
-      "collection": "zweihander.zh-ancestries",
+      "collection": "blackbirds.zh-ancestries",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/family-tree.svg",
+      "img": "systems/blackbirds/assets/icons/family-tree.svg",
       "range": [
         3,
         3
@@ -66,10 +66,10 @@
     },
     {
       "_id": "w22bbd0wuob63dxp",
-      "collection": "zweihander.zh-ancestries",
+      "collection": "blackbirds.zh-ancestries",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/family-tree.svg",
+      "img": "systems/blackbirds/assets/icons/family-tree.svg",
       "range": [
         4,
         4
@@ -83,10 +83,10 @@
     },
     {
       "_id": "xedg39ah1nxc9ih7",
-      "collection": "zweihander.zh-ancestries",
+      "collection": "blackbirds.zh-ancestries",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/family-tree.svg",
+      "img": "systems/blackbirds/assets/icons/family-tree.svg",
       "range": [
         5,
         5

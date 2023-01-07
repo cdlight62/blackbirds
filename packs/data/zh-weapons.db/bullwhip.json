@@ -28,11 +28,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.H8T5kGv1OdoSNF9S"
+      "sourceId": "Compendium.blackbirds.weapons.H8T5kGv1OdoSNF9S"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/whip.svg",
+  "img": "systems/blackbirds/assets/icons/whip.svg",
   "name": "Bullwhip",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

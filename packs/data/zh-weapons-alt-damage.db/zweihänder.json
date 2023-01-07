@@ -28,11 +28,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.kX7VZJ82JMpgjJxg"
+      "sourceId": "Compendium.blackbirds.weapons.kX7VZJ82JMpgjJxg"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/two-handed-sword.svg",
+  "img": "systems/blackbirds/assets/icons/two-handed-sword.svg",
   "name": "Zweihänder",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

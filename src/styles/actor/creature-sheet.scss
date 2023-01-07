@@ -1,4 +1,4 @@
-body.game.vtt.system-zweihander .zweihander.sheet.creature {
+body.game.vtt.system-blackbirds .blackbirds.sheet.creature {
   --zh-structural-border: 2px groove var(--zh-clr-bg2);
 
   max-height: 1200px;
@@ -13,7 +13,7 @@ body.game.vtt.system-zweihander .zweihander.sheet.creature {
 
   .window-content {
     background-color: var(--zh-clr-bg0);
-    background-image: url('/systems/zweihander/assets/creature-sheet-backdrop.webp');
+    background-image: url('/systems/blackbirds/assets/creature-sheet-backdrop.webp');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom center;
@@ -444,7 +444,7 @@ body.game.vtt.system-zweihander .zweihander.sheet.creature {
   &.gm-screen-grid-cell-content {
     min-width: 440px !important;
   }
-  &.zweihander-compact-sheet,
+  &.blackbirds-compact-sheet,
   &.gm-screen-grid-cell-content {
     min-height: 400px;
     min-width: 440px;

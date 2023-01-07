@@ -95,10 +95,10 @@
   },
   "effects": [],
   "flags": {
-    "zweihander": {}
+    "blackbirds": {}
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/provocateur.svg",
+  "img": "systems/blackbirds/assets/icons/provocateur.svg",
   "name": "Provocateur",
   "permission": {
     "9cilLhNTlIyJpmtZ": 3,

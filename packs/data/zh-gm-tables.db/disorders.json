@@ -8,7 +8,7 @@
   },
   "folder": null,
   "formula": "1d20",
-  "img": "systems/zweihander/assets/icons/abstract-057.svg",
+  "img": "systems/blackbirds/assets/icons/abstract-057.svg",
   "name": "Disorders",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,
@@ -18,10 +18,10 @@
   "results": [
     {
       "_id": "2kpRPA5HwLb09kbg",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         1,
         1
@@ -35,10 +35,10 @@
     },
     {
       "_id": "ZEb2NRjUYtrTNOVz",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         2,
         2
@@ -52,10 +52,10 @@
     },
     {
       "_id": "HJmlXdZMo3DPWLgZ",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         3,
         3
@@ -69,10 +69,10 @@
     },
     {
       "_id": "uZoqJFXaG8WqulYL",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         4,
         4
@@ -86,10 +86,10 @@
     },
     {
       "_id": "1PIDvMn1z7JESWMY",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         5,
         5
@@ -103,10 +103,10 @@
     },
     {
       "_id": "mGzhBZAQIsy8nCm8",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         6,
         6
@@ -120,10 +120,10 @@
     },
     {
       "_id": "Nfdy3ptvcMFiOoCd",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         7,
         7
@@ -137,10 +137,10 @@
     },
     {
       "_id": "EZVZIZZXL9LeQgWk",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         8,
         8
@@ -154,10 +154,10 @@
     },
     {
       "_id": "3y2Q9UvekLwqhzew",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         9,
         9
@@ -171,10 +171,10 @@
     },
     {
       "_id": "JWVamf9RKHfrPkB0",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         10,
         10
@@ -188,10 +188,10 @@
     },
     {
       "_id": "yG77qchwGYs7RNuJ",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         11,
         11
@@ -205,10 +205,10 @@
     },
     {
       "_id": "JXlWsTjPF69TQdm9",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         12,
         12
@@ -222,10 +222,10 @@
     },
     {
       "_id": "5IGTHJ0acX3BAh0V",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         13,
         13
@@ -239,10 +239,10 @@
     },
     {
       "_id": "l3cVtYQ6NQ5ZRqmL",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         14,
         14
@@ -256,10 +256,10 @@
     },
     {
       "_id": "4t7o7uXhhnbwlYwf",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         15,
         15
@@ -273,10 +273,10 @@
     },
     {
       "_id": "p4S8HiUfSaXWw5n4",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         16,
         16
@@ -290,10 +290,10 @@
     },
     {
       "_id": "LvSUFVLj8wa8LNh5",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         17,
         17
@@ -307,10 +307,10 @@
     },
     {
       "_id": "qDb4v8fmlz2uSktf",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         18,
         18
@@ -324,10 +324,10 @@
     },
     {
       "_id": "3P7pBH08ZhpoldN3",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         19,
         19
@@ -341,10 +341,10 @@
     },
     {
       "_id": "SyBvUpZXMySmwKyN",
-      "collection": "zweihander.zh-disorders",
+      "collection": "blackbirds.zh-disorders",
       "drawn": false,
       "flags": {},
-      "img": "systems/zweihander/assets/icons/abstract-057.svg",
+      "img": "systems/blackbirds/assets/icons/abstract-057.svg",
       "range": [
         20,
         20

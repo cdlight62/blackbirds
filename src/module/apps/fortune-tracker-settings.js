@@ -1,13 +1,13 @@
 export default class FortuneTrackerSettings extends FormApplication {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      template: 'systems/zweihander/src/templates/app/fortune-tracker-settings.hbs',
+      template: 'systems/blackbirds/src/templates/app/fortune-tracker-settings.hbs',
       popOut: true,
       minimizable: true,
       resizable: false,
       title: 'Fortune Tracker Settings',
       id: 'fortuneTrackerSettings',
-      classes: ['zweihander'],
+      classes: ['blackbirds'],
       width: 600,
       height: 275,
       submitOnChange: true,
@@ -17,7 +17,7 @@ export default class FortuneTrackerSettings extends FormApplication {
   }
 
   getData() {
-    const fortuneTrackerData = game.settings.get('zweihander', 'fortuneTrackerSettings');
+    const fortuneTrackerData = game.settings.get('blackbirds', 'fortuneTrackerSettings');
     fortuneTrackerData.choices = {};
     fortuneTrackerData.choices.size = [
       { value: 'compact', label: 'Compact (Text)' },
@@ -41,6 +41,6 @@ export default class FortuneTrackerSettings extends FormApplication {
 
   _updateObject(event, formData) {
     const data = expandObject(formData);
-    game.settings.set('zweihander', 'fortuneTrackerSettings', data);
+    game.settings.set('blackbirds', 'fortuneTrackerSettings', data);
   }
 }

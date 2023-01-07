@@ -11,11 +11,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.skills.yc12w4M8LCdmBYiy"
+      "sourceId": "Compendium.blackbirds.skills.yc12w4M8LCdmBYiy"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/skills.svg",
+  "img": "systems/blackbirds/assets/icons/skills.svg",
   "name": "Bargain",
   "permission": {
     "9cw85KJ7nPukNIXd": 3,

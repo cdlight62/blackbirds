@@ -11,11 +11,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.skills.tvBWPpezQJ8xEClB"
+      "sourceId": "Compendium.blackbirds.skills.tvBWPpezQJ8xEClB"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/skills.svg",
+  "img": "systems/blackbirds/assets/icons/skills.svg",
   "name": "Awareness",
   "permission": {
     "9cw85KJ7nPukNIXd": 3,

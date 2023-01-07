@@ -1,6 +1,6 @@
-import ZweihanderBaseActorSheet from './base-actor-sheet';
+import BlackbirdsBaseActorSheet from './base-actor-sheet';
 import { selectedChoice } from '../../utils';
-export default class ZweihanderCreatureSheet extends ZweihanderBaseActorSheet {
+export default class BlackbirdsCreatureSheet extends BlackbirdsBaseActorSheet {
   static unsupportedItemTypes = new Set([
     'ancestry',
     'profession',
@@ -15,10 +15,10 @@ export default class ZweihanderCreatureSheet extends ZweihanderBaseActorSheet {
   ]);
 
   static get defaultOptions() {
-    const compactMode = game.settings.get('zweihander', 'openInCompactMode');
+    const compactMode = game.settings.get('blackbirds', 'openInCompactMode');
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: super.defaultOptions.classes.concat(['creature']),
-      template: 'systems/zweihander/src/templates/creature/main.hbs',
+      template: 'systems/blackbirds/src/templates/creature/main.hbs',
       width: compactMode ? 540 : 620,
       height: compactMode ? 540 : 669,
       scrollY: ['.save-scroll', '.sheet-body'],

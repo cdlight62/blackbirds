@@ -11,11 +11,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.skills.z1YZuvV2JD4edPK7"
+      "sourceId": "Compendium.blackbirds.skills.z1YZuvV2JD4edPK7"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/skills.svg",
+  "img": "systems/blackbirds/assets/icons/skills.svg",
   "name": "Rumor",
   "permission": {
     "9cw85KJ7nPukNIXd": 3,

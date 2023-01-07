@@ -1,6 +1,6 @@
 {
-  "name": "zweihander",
-  "description": "Implementation of the d100 Zweihänder system for FoundryVTT",
+  "name": "blackbirds",
+  "description": "Implementation of the d100 blackbirds system for FoundryVTT",
   "license": "MIT",
   "private": true,
   "type": "module",

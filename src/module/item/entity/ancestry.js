@@ -1,5 +1,5 @@
-import ZweihanderBaseItem from './base-item';
+import BlackbirdsBaseItem from './base-item';
 
-export default class ZweihanderAncestry extends ZweihanderBaseItem {
+export default class BlackbirdsAncestry extends BlackbirdsBaseItem {
   static linkedSingleProperties = [{ property: 'ancestralTrait', itemType: 'trait' }];
 }

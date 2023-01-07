@@ -10,18 +10,18 @@ export const registerSystemSettings = function () {
   /*  System settings registration                */
   /* -------------------------------------------- */
 
-  game.settings.register('zweihander', 'gameSystem', {
+  game.settings.register('blackbirds', 'gameSystem', {
     name: 'Game System',
-    hint: 'Choose the specific implementation of the Zweihander d100 system you want to play',
+    hint: 'Choose the specific implementation of the Blackbirds d100 system you want to play',
     scope: 'world',
     type: String,
-    default: 'zweihander',
+    default: 'blackbirds',
     choices: ZWEI.supportedGameSystems,
     config: true,
     onChange: debouncedReload,
   });
 
-  game.settings.register('zweihander', 'systemMigrationVersion', {
+  game.settings.register('blackbirds', 'systemMigrationVersion', {
     name: 'System Migration Version',
     scope: 'world',
     config: false,
@@ -29,7 +29,7 @@ export const registerSystemSettings = function () {
     default: '',
   });
 
-  game.settings.register('zweihander', 'encumbranceNineForOne', {
+  game.settings.register('blackbirds', 'encumbranceNineForOne', {
     name: 'Small Item Encumbrance',
     hint: 'Enable or disable rule for small item Encumbrance, where 9 small items add up to 1 point of Encumbrance.',
     scope: 'world',
@@ -38,7 +38,7 @@ export const registerSystemSettings = function () {
     config: true,
   });
 
-  game.settings.register('zweihander', 'trackRewardPoints', {
+  game.settings.register('blackbirds', 'trackRewardPoints', {
     name: 'Automatically Track Reward Points',
     hint: 'Enable or disable the automatic tracking of Reward Point expenditure.',
     scope: 'world',
@@ -47,7 +47,7 @@ export const registerSystemSettings = function () {
     config: true,
   });
 
-  game.settings.register('zweihander', 'injuryPrompt', {
+  game.settings.register('blackbirds', 'injuryPrompt', {
     name: 'Automatic Injury Prompt',
     hint: 'Automatically prompt user to roll for Injury when falling on the Damage Condition Track.',
     scope: 'world',
@@ -56,7 +56,7 @@ export const registerSystemSettings = function () {
     config: true,
   });
 
-  game.settings.register('zweihander', 'openInCompactMode', {
+  game.settings.register('blackbirds', 'openInCompactMode', {
     name: 'Open in Compact Mode',
     hint: 'Creature & NPC Sheets will be opened in Compact Mode by default',
     scope: 'client',
@@ -65,7 +65,7 @@ export const registerSystemSettings = function () {
     config: true,
   });
 
-  game.settings.register('zweihander', 'systemId', {
+  game.settings.register('blackbirds', 'systemId', {
     name: 'systemId',
     scope: 'global',
     type: String,
@@ -73,17 +73,17 @@ export const registerSystemSettings = function () {
     config: false,
   });
 
-  game.settings.register('zweihander', 'skillPack', {
+  game.settings.register('blackbirds', 'skillPack', {
     name: 'Skill List',
     hint: 'ID of the compendium pack to use for the list of available skills for new actors.',
     scope: 'world',
     type: String,
-    default: 'zweihander.skills',
+    default: 'blackbirds.skills',
     config: true,
     onChange: updateActorSkillsFromPack,
   });
 
-  game.settings.register('zweihander', 'unlimitedFortuneExplodes', {
+  game.settings.register('blackbirds', 'unlimitedFortuneExplodes', {
     name: 'Unlimited Fortune Explodes',
     hint: 'Enable to allow to explode fury dice more than once per attack.',
     scope: 'world',
@@ -92,9 +92,9 @@ export const registerSystemSettings = function () {
     config: true,
   });
 
-  game.settings.register('zweihander', 'theme', {
-    name: 'Zweihander Sheet Theme',
-    hint: 'Choose a theme for your Zweihander sheets',
+  game.settings.register('blackbirds', 'theme', {
+    name: 'Blackbirds Sheet Theme',
+    hint: 'Choose a theme for your Blackbirds sheets',
     scope: 'client',
     type: String,
     default: 'gruvbox-dark',
@@ -104,14 +104,14 @@ export const registerSystemSettings = function () {
     },
     config: true,
     onChange: (theme) => {
-      $('body.system-zweihander').addClass('zweihander-theme-' + theme);
-      $('body.system-zweihander').removeClass((i, c) =>
-        c.split(' ').filter((c) => c.startsWith('zweihander-theme-') && c !== 'zweihander-theme-' + theme)
+      $('body.system-blackbirds').addClass('blackbirds-theme-' + theme);
+      $('body.system-blackbirds').removeClass((i, c) =>
+        c.split(' ').filter((c) => c.startsWith('blackbirds-theme-') && c !== 'blackbirds-theme-' + theme)
       );
     },
   });
 
-  game.settings.register('zweihander', 'fortuneTrackerPersistedState', {
+  game.settings.register('blackbirds', 'fortuneTrackerPersistedState', {
     scope: 'world',
     config: false,
     type: Object,
@@ -121,7 +121,7 @@ export const registerSystemSettings = function () {
       removed: 0,
     },
   });
-  game.settings.register('zweihander', 'fortuneTrackerSettings', {
+  game.settings.register('blackbirds', 'fortuneTrackerSettings', {
     scope: 'world',
     config: false,
     type: Object,
@@ -129,11 +129,11 @@ export const registerSystemSettings = function () {
       removeUsedMisfortune: false,
       notifications: 'notify',
       size: 'normal',
-      fortunePath: '/systems/zweihander/assets/fortune-life.webp',
-      misfortunePath: '/systems/zweihander/assets/fortune-death.webp',
+      fortunePath: '/systems/blackbirds/assets/fortune-life.webp',
+      misfortunePath: '/systems/blackbirds/assets/fortune-death.webp',
     },
   });
-  game.settings.registerMenu('zweihander', 'fortuneTrackerSettingsMenu', {
+  game.settings.registerMenu('blackbirds', 'fortuneTrackerSettingsMenu', {
     name: 'Fortune Tracker Settings',
     label: 'Fortune Tracker Settings', // The text label used in the button
     hint: 'Configure the look & behavior of the Fortune Tracker.',
@@ -141,7 +141,7 @@ export const registerSystemSettings = function () {
     type: FortuneTrackerSettings, // A FormApplication subclass
     restricted: true, // Restrict this submenu to gamemaster only?
   });
-  game.settings.register('zweihander', 'currencySettings', {
+  game.settings.register('blackbirds', 'currencySettings', {
     scope: 'world',
     config: false,
     type: Array,
@@ -166,7 +166,7 @@ export const registerSystemSettings = function () {
       },
     ],
   });
-  game.settings.registerMenu('zweihander', 'currencySettingsMenu', {
+  game.settings.registerMenu('blackbirds', 'currencySettingsMenu', {
     name: 'Currency Settings',
     label: 'Currency Settings', // The text label used in the button
     hint: 'Configure the types and conversion rates of currency in your world',

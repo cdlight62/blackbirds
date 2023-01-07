@@ -1,4 +1,4 @@
-body.game.vtt.system-zweihander .zweihander.sheet.character {
+body.game.vtt.system-blackbirds .blackbirds.sheet.character {
   max-height: 1200px;
   max-width: 1200px;
   // sheet dimensions
@@ -16,7 +16,7 @@ body.game.vtt.system-zweihander .zweihander.sheet.character {
     }
   }
 
-  &.zweihander-compact-sheet {
+  &.blackbirds-compact-sheet {
     aside.details {
       display: none !important;
     }

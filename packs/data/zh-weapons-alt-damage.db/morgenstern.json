@@ -28,11 +28,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.DJbYEydA0pPOYvx1"
+      "sourceId": "Compendium.blackbirds.weapons.DJbYEydA0pPOYvx1"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/flail.svg",
+  "img": "systems/blackbirds/assets/icons/flail.svg",
   "name": "Morgenstern",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

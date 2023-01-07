@@ -1,8 +1,8 @@
 import { ZWEI } from '../../config';
 import { assignPacks, selectedChoice } from '../../utils';
-import ZweihanderCreatureSheet from './creature-sheet';
+import BlackbirdsCreatureSheet from './creature-sheet';
 
-export default class ZweihanderNpcSheet extends ZweihanderCreatureSheet {
+export default class BlackbirdsNpcSheet extends BlackbirdsCreatureSheet {
   static unsupportedItemTypes = new Set(['ancestry', 'profession', 'quality', 'skill', 'uniqueAdvance']);
 
   static get defaultOptions() {

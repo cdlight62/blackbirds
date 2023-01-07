@@ -28,11 +28,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.DmseucfWqqWSHGfQ"
+      "sourceId": "Compendium.blackbirds.weapons.DmseucfWqqWSHGfQ"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/throwing-ball.svg",
+  "img": "systems/blackbirds/assets/icons/throwing-ball.svg",
   "name": "Improvised throwing weapon",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

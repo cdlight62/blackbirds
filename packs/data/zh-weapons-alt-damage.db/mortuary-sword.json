@@ -28,11 +28,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.1aIlMHzcnifo3BNG"
+      "sourceId": "Compendium.blackbirds.weapons.1aIlMHzcnifo3BNG"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/saber-slash.svg",
+  "img": "systems/blackbirds/assets/icons/saber-slash.svg",
   "name": "Mortuary sword",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

@@ -5,18 +5,18 @@ export default class CurrencySettings extends FormApplication {
 
   constructor(...args) {
     super(...args);
-    this.#currencies = game.settings.get('zweihander', 'currencySettings');
+    this.#currencies = game.settings.get('blackbirds', 'currencySettings');
   }
 
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      template: 'systems/zweihander/src/templates/app/currency-settings.hbs',
+      template: 'systems/blackbirds/src/templates/app/currency-settings.hbs',
       popOut: true,
       minimizable: false,
       resizable: false,
       title: 'Currency Settings',
       id: 'currency-settings',
-      classes: ['zweihander'],
+      classes: ['blackbirds'],
       width: 400,
       height: 'auto',
       submitOnChange: false,
@@ -53,7 +53,7 @@ export default class CurrencySettings extends FormApplication {
 
   async _updateObject(event, formData) {
     const c = formDataToArray(formData);
-    await game.settings.set('zweihander', 'currencySettings', c);
+    await game.settings.set('blackbirds', 'currencySettings', c);
     foundry.utils.debounce(() => window.location.reload(), 500)();
   }
 }

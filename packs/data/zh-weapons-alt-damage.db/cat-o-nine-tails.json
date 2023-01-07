@@ -29,17 +29,17 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.TWdhToemufs871g8"
+      "sourceId": "Compendium.blackbirds.weapons.TWdhToemufs871g8"
     },
     "exportSource": {
       "coreVersion": "0.8.9",
-      "system": "zweihander",
+      "system": "blackbirds",
       "systemVersion": "0.3.30",
       "world": "talron2"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/whip.svg",
+  "img": "systems/blackbirds/assets/icons/whip.svg",
   "name": "Cat O’ Nine Tails",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

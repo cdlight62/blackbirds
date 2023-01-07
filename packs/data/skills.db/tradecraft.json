@@ -11,11 +11,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.skills.LSkLYnEEySUajsvM"
+      "sourceId": "Compendium.blackbirds.skills.LSkLYnEEySUajsvM"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/skills.svg",
+  "img": "systems/blackbirds/assets/icons/skills.svg",
   "name": "Tradecraft",
   "permission": {
     "9cw85KJ7nPukNIXd": 3,

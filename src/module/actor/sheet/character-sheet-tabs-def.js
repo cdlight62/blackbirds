@@ -191,7 +191,7 @@ export function getItemGroups(groupsData) {
           key: localizePath('details.category'),
         },
         {
-          title: 'Currently in Effect', // @todo: change this in ZweihanderActiveEffect implementation to be more intuitive
+          title: 'Currently in Effect', // @todo: change this in BlackbirdsActiveEffect implementation to be more intuitive
           size: 150,
           key: 'disabled',
           isCheckbox: true,

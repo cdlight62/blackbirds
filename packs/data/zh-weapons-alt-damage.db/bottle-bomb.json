@@ -28,11 +28,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.R0i7oMG7lojZnFnN"
+      "sourceId": "Compendium.blackbirds.weapons.R0i7oMG7lojZnFnN"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/fire-bottle.svg",
+  "img": "systems/blackbirds/assets/icons/fire-bottle.svg",
   "name": "Bottle bomb",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

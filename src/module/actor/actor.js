@@ -1,13 +1,13 @@
-import ZweihanderPC from './entity/pc';
-import ZweihanderNPC from './entity/npc';
-import ZweihanderCreature from './entity/creature';
+import BlackbirdsPC from './entity/pc';
+import BlackbirdsNPC from './entity/npc';
+import BlackbirdsCreature from './entity/creature';
 import { ZWEI } from '../config';
 
-export default class ZweihanderActor extends Actor {
+export default class BlackbirdsActor extends Actor {
   static types = {
-    character: new ZweihanderPC(),
-    npc: new ZweihanderNPC(),
-    creature: new ZweihanderCreature(),
+    character: new BlackbirdsPC(),
+    npc: new BlackbirdsNPC(),
+    creature: new BlackbirdsCreature(),
   };
 
   constructor(...args) {
@@ -17,8 +17,8 @@ export default class ZweihanderActor extends Actor {
   // convention: dispatch is async when the function it calls is
   dispatch(fnName, cfg = { orElse: { value: {}, async: false }, args: [] }) {
     // console.log(`${this.name}: dispatch: ${fnName}`);
-    if (ZweihanderActor.types[this.type]) {
-      const type = ZweihanderActor.types[this.type];
+    if (BlackbirdsActor.types[this.type]) {
+      const type = BlackbirdsActor.types[this.type];
       if (type[fnName] && typeof type[fnName] === 'function') {
         if (cfg?.args?.length) {
           return type[fnName](...cfg.args, this);

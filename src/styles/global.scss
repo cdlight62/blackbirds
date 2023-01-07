@@ -43,7 +43,7 @@
   --bb-font-default: 'EF' !important;
 }
 
-.zweihander-theme-gruvbox-light {
+.blackbirds-theme-gruvbox-light {
   --zh-clr-fg0: var(--zh-clr-dark0);
   --zh-clr-fg1: var(--zh-clr-dark1);
   --zh-clr-fg2: var(--zh-clr-dark2);
@@ -76,7 +76,7 @@
   --zh-clr-accent-rgb: 121, 116, 14;
 }
 
-.zweihander-theme-gruvbox-dark {
+.blackbirds-theme-gruvbox-dark {
   --zh-clr-fg0: var(--zh-clr-bright0);
   --zh-clr-fg1: var(--zh-clr-bright1);
   --zh-clr-fg2: var(--zh-clr-bright2);
@@ -110,7 +110,7 @@
   --zh-clr-accent-rgb: 184, 187, 38;
 }
 
-body.game.vtt.system-zweihander {
+body.game.vtt.system-blackbirds {
   --color-text-light-highlight: var(--zh-clr-fg0);
   --color-text-light-heading: var(--zh-clr-fg0);
   --color-text-light-primary: var(--zh-clr-fg1);
@@ -349,47 +349,47 @@ body.game.vtt.system-zweihander {
   font-family: 'Adobe Caslon Pro';
   font-style: normal;
   font-weight: normal;
-  src: url('/systems/zweihander/fonts/caslon-pro-regular.woff2') format('woff2');
+  src: url('/systems/blackbirds/fonts/caslon-pro-regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Adobe Caslon Pro';
   font-style: normal;
   font-weight: bold;
-  src: url('/systems/zweihander/fonts/caslon-pro-bold.woff2') format('woff2');
+  src: url('/systems/blackbirds/fonts/caslon-pro-bold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Adobe Caslon Pro';
   font-style: italic;
   font-weight: normal;
-  src: url('/systems/zweihander/fonts/caslon-pro-italic.woff2') format('woff2');
+  src: url('/systems/blackbirds/fonts/caslon-pro-italic.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Dominican Small Caps';
   font-style: normal;
   font-weight: normal;
-  src: url('/systems/zweihander/fonts/dominican-small-caps.woff2') format('woff2');
+  src: url('/systems/blackbirds/fonts/dominican-small-caps.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'EF';
   font-style: normal;
   font-weight: normal;
-  src: url('/systems/zweihander/fonts/ef-r.woff2') format('woff2');
+  src: url('/systems/blackbirds/fonts/ef-r.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'EF';
   font-style: normal;
   font-weight: bold;
-  src: url('/systems/zweihander/fonts/ef-b.woff2') format('woff2');
+  src: url('/systems/blackbirds/fonts/ef-b.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'BF';
   font-style: normal;
   font-weight: normal;
-  src: url('/systems/zweihander/fonts/bf.woff2') format('woff2');
+  src: url('/systems/blackbirds/fonts/bf.woff2') format('woff2');
 }

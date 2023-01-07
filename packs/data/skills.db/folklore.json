@@ -11,11 +11,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.skills.bbXzXrVM2nQ78EKq"
+      "sourceId": "Compendium.blackbirds.skills.bbXzXrVM2nQ78EKq"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/skills.svg",
+  "img": "systems/blackbirds/assets/icons/skills.svg",
   "name": "Folklore",
   "permission": {
     "9cw85KJ7nPukNIXd": 3,

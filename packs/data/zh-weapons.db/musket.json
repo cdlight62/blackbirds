@@ -28,11 +28,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.weapons.ezPXLmhxmCWSgwKJ"
+      "sourceId": "Compendium.blackbirds.weapons.ezPXLmhxmCWSgwKJ"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/musket.svg",
+  "img": "systems/blackbirds/assets/icons/musket.svg",
   "name": "Musket",
   "permission": {
     "JyjuBRFhP4y9QWxg": 3,

@@ -8,7 +8,7 @@ export const registerHandlebarHelpers = async function () {
   const $$ = (name, fn) => Handlebars.registerHelper(name, fn);
 
   $$('$$', function (path) {
-    return 'systems/zweihander/src/templates/' + path + '.hbs';
+    return 'systems/blackbirds/src/templates/' + path + '.hbs';
   });
 
   $$('zhGetFirstLetter', function (word) {
@@ -125,7 +125,7 @@ export const registerHandlebarHelpers = async function () {
 
   $$('zhSpeakerPic', function (message) {
     const actor = ChatMessage.getSpeakerActor(message.speaker);
-    if (message.flags?.zweihander?.img) return message.flags.zweihander.img;
+    if (message.flags?.blackbirds?.img) return message.flags.blackbirds.img;
     if (actor && actor.img) return actor.img;
     const author = game.users.get(message.user);
     if (author && author.avatar) return author.avatar;
@@ -156,7 +156,7 @@ export const registerHandlebarHelpers = async function () {
   );
 
   $$('zhPrice', (price) => {
-    const currencies = game.settings.get('zweihander', 'currencySettings');
+    const currencies = game.settings.get('blackbirds', 'currencySettings');
     return new Handlebars.SafeString(
       currencies
         .map(
@@ -170,7 +170,7 @@ export const registerHandlebarHelpers = async function () {
   });
 
   $$('zhPriceInputs', (price) => {
-    const currencies = game.settings.get('zweihander', 'currencySettings');
+    const currencies = game.settings.get('blackbirds', 'currencySettings');
     const inputs = currencies
       .map(
         (c) => `

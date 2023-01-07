@@ -1,26 +1,26 @@
-import ZweihanderWeapon from './entity/weapon';
-import ZweihanderProfession from './entity/profession';
-import ZweihanderSkill from './entity/skill';
-import ZweihanderAncestry from './entity/ancestry';
-import ZweihanderArmor from './entity/armor';
-import ZweihanderQuality from './entity/quality';
-import ZweihanderInjury from './entity/injury';
-import ZweihanderSpell from './entity/spell';
+import BlackbirdsWeapon from './entity/weapon';
+import BlackbirdsProfession from './entity/profession';
+import BlackbirdsSkill from './entity/skill';
+import BlackbirdsAncestry from './entity/ancestry';
+import BlackbirdsArmor from './entity/armor';
+import BlackbirdsQuality from './entity/quality';
+import BlackbirdsInjury from './entity/injury';
+import BlackbirdsSpell from './entity/spell';
 
 import { ZWEI } from '../config';
-import ZweihanderTrapping from './entity/trapping';
+import BlackbirdsTrapping from './entity/trapping';
 
-export default class ZweihanderItem extends Item {
+export default class BlackbirdsItem extends Item {
   static types = {
-    weapon: new ZweihanderWeapon(),
-    armor: new ZweihanderArmor(),
-    profession: new ZweihanderProfession(),
-    skill: new ZweihanderSkill(),
-    ancestry: new ZweihanderAncestry(),
-    injury: new ZweihanderInjury(),
-    quality: new ZweihanderQuality(),
-    trapping: new ZweihanderTrapping(),
-    spell: new ZweihanderSpell(),
+    weapon: new BlackbirdsWeapon(),
+    armor: new BlackbirdsArmor(),
+    profession: new BlackbirdsProfession(),
+    skill: new BlackbirdsSkill(),
+    ancestry: new BlackbirdsAncestry(),
+    injury: new BlackbirdsInjury(),
+    quality: new BlackbirdsQuality(),
+    trapping: new BlackbirdsTrapping(),
+    spell: new BlackbirdsSpell(),
   };
 
   constructor(...args) {
@@ -30,8 +30,8 @@ export default class ZweihanderItem extends Item {
   // convention: dispatch is async when the function it calls is
   dispatch(fnName, cfg = { orElse: { value: {}, async: false }, args: [] }) {
     // console.log(`${this.name}: dispatch: ${fnName}`);
-    if (ZweihanderItem.types[this.type]) {
-      const type = ZweihanderItem.types[this.type];
+    if (BlackbirdsItem.types[this.type]) {
+      const type = BlackbirdsItem.types[this.type];
       if (type[fnName] && typeof type[fnName] === 'function') {
         if (cfg.args?.length) {
           return type[fnName](...cfg.args, this);

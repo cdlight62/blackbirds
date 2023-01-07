@@ -27,11 +27,11 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.zweihander.ancestries.Qs6vrvP8kHWDbTb8"
+      "sourceId": "Compendium.blackbirds.ancestries.Qs6vrvP8kHWDbTb8"
     }
   },
   "folder": null,
-  "img": "systems/zweihander/assets/icons/family-tree.svg",
+  "img": "systems/blackbirds/assets/icons/family-tree.svg",
   "name": "Elf",
   "permission": {
     "9cilLhNTlIyJpmtZ": 3,

@@ -6,7 +6,7 @@ export const createItemMacro = async (macroData, slot) => {
   if (!(item.type === 'weapon' || item.type === 'spell'))
     return ui?.notifications.warn(`Hotbar macros do not support specified Item type '${item.type}'.`);
 
-  const command = `game.zweihander.rollItemMacro("${macroData.actorId}", "${item._id}");`;
+  const command = `game.blackbirds.rollItemMacro("${macroData.actorId}", "${item._id}");`;
   let macro = game.macros.find((m) => m.name === item.name && m.command === command);
   if (!macro) {
     macro = await Macro.create({
@@ -14,7 +14,7 @@ export const createItemMacro = async (macroData, slot) => {
       type: 'script',
       img: item.img,
       command: command,
-      flags: { 'zweihander.itemMacro': true },
+      flags: { 'blackbirds.itemMacro': true },
     });
   }
   game.user.assignHotbarMacro(macro, slot);

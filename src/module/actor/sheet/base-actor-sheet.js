@@ -1,16 +1,16 @@
-import * as ZweihanderDice from '../../dice';
-import * as ZweihanderUtils from '../../utils';
-import ZweihanderProfession from '../../item/entity/profession';
-import ZweihanderQuality from '../../item/entity/quality';
-import ZweihanderLanguageConfig from '../../apps/language-config';
-import ZweihanderActorConfig from '../../apps/actor-config';
+import * as BlackbirdsDice from '../../dice';
+import * as BlackbirdsUtils from '../../utils';
+import BlackbirdsProfession from '../../item/entity/profession';
+import BlackbirdsQuality from '../../item/entity/quality';
+import BlackbirdsLanguageConfig from '../../apps/language-config';
+import BlackbirdsActorConfig from '../../apps/actor-config';
 
-export default class ZweihanderBaseActorSheet extends ActorSheet {
+export default class BlackbirdsBaseActorSheet extends ActorSheet {
   static get defaultOptions() {
-    const compactMode = game.settings.get('zweihander', 'openInCompactMode');
-    const classes = ['zweihander', 'sheet', 'actor', 'damage-tracker'];
+    const compactMode = game.settings.get('blackbirds', 'openInCompactMode');
+    const classes = ['blackbirds', 'sheet', 'actor', 'damage-tracker'];
     if (compactMode) {
-      classes.push('zweihander-compact-sheet');
+      classes.push('blackbirds-compact-sheet');
     }
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes,
@@ -25,8 +25,8 @@ export default class ZweihanderBaseActorSheet extends ActorSheet {
 
   constructor(...args) {
     super(...args);
-    this.#languageConfig = new ZweihanderLanguageConfig(this.actor);
-    this.#actorConfig = new ZweihanderActorConfig(this.actor);
+    this.#languageConfig = new BlackbirdsLanguageConfig(this.actor);
+    this.#actorConfig = new BlackbirdsActorConfig(this.actor);
   }
 
   /** @override */
@@ -61,7 +61,7 @@ export default class ZweihanderBaseActorSheet extends ActorSheet {
     this._prepareItems(sheetData);
 
     const itemGroups = this._processItemGroups(this._getItemGroups(sheetData));
-    sheetData.itemGroups = ZweihanderUtils.assignPacks(this.actor.type, itemGroups);
+    sheetData.itemGroups = BlackbirdsUtils.assignPacks(this.actor.type, itemGroups);
 
     // Return data to the sheet
     return sheetData;
@@ -372,7 +372,7 @@ export default class ZweihanderBaseActorSheet extends ActorSheet {
         createdItemArray = await this.actor.createEmbeddedDocuments('ActiveEffect', [
           {
             label: 'New Effect',
-            icon: 'systems/zweihander/assets/icons/dice-fire.svg',
+            icon: 'systems/blackbirds/assets/icons/dice-fire.svg',
             origin: 'Actor.' + this.actor.id,
             details: {
               source: `${this.actor.name} (Manual)`,
@@ -406,7 +406,7 @@ export default class ZweihanderBaseActorSheet extends ActorSheet {
 
     // Handle formulas for display
     html.find('.inject-data').each(async function () {
-      $(this).text(await ZweihanderUtils.parseDataPaths($(this).text().trim(), actor));
+      $(this).text(await BlackbirdsUtils.parseDataPaths($(this).text().trim(), actor));
     });
 
     html.find('.inline-roll').each(async function () {
@@ -416,7 +416,7 @@ export default class ZweihanderBaseActorSheet extends ActorSheet {
 
       if (dataPath && dataPath.includes('@'))
         $(this).html(
-          '<i class="fas fa-dice-d20"></i> ' + diceRoll + '+' + (await ZweihanderUtils.parseDataPaths(dataPath, actor))
+          '<i class="fas fa-dice-d20"></i> ' + diceRoll + '+' + (await BlackbirdsUtils.parseDataPaths(dataPath, actor))
         );
     });
 
@@ -453,7 +453,7 @@ export default class ZweihanderBaseActorSheet extends ActorSheet {
         content: !event.currentTarget.checked
           ? `<h4>Reset Profession progress?</h4>`
           : `<h4>Purchase all Profession advances?</h4><p>Current purchase state will be lost!</p>`,
-        yes: () => ZweihanderProfession.toggleProfessionPurchases(item, !event.currentTarget.checked),
+        yes: () => BlackbirdsProfession.toggleProfessionPurchases(item, !event.currentTarget.checked),
         defaultYes: false,
       });
     });
@@ -475,14 +475,14 @@ export default class ZweihanderBaseActorSheet extends ActorSheet {
       const li = $(event.currentTarget).parents('.item');
       const item = this.actor.items.get(li.data('itemId')).toObject(false);
       if (item.type === 'weapon' || item.type === 'armor') {
-        item.system.qualities = await ZweihanderQuality.getQualities(item.system.qualities.value);
+        item.system.qualities = await BlackbirdsQuality.getQualities(item.system.qualities.value);
       }
       //console.log(item);
       let html;
       try {
-        html = await renderTemplate(`systems/zweihander/src/templates/item-card/item-card-${item.type}.hbs`, item);
+        html = await renderTemplate(`systems/blackbirds/src/templates/item-card/item-card-${item.type}.hbs`, item);
       } catch (e) {
-        html = await renderTemplate(`systems/zweihander/src/templates/item-card/item-card-fallback.hbs`, item);
+        html = await renderTemplate(`systems/blackbirds/src/templates/item-card/item-card-fallback.hbs`, item);
       }
       await ChatMessage.create({ content: html });
     });
@@ -519,7 +519,7 @@ export default class ZweihanderBaseActorSheet extends ActorSheet {
       event.preventDefault();
       const target = $(event.currentTarget);
       const qualityName = target.text();
-      const quality = await ZweihanderUtils.findItemWorldWide('quality', qualityName);
+      const quality = await BlackbirdsUtils.findItemWorldWide('quality', qualityName);
       quality.sheet.render(true);
     });
 
@@ -583,14 +583,14 @@ export default class ZweihanderBaseActorSheet extends ActorSheet {
     const element = event.currentTarget;
     const skill = element.dataset.label;
     const skillItem = this.actor.items.find(
-      (item) => item.type === 'skill' && ZweihanderUtils.normalizedEquals(item.name, skill)
+      (item) => item.type === 'skill' && BlackbirdsUtils.normalizedEquals(item.name, skill)
     );
     if (skillItem) {
       const additionalConfiguration = {};
       if (testType === 'weapon' || testType === 'spell') {
         additionalConfiguration[`${testType}Id`] = $(element).parents('.item').data('itemId');
       }
-      await ZweihanderDice.rollTest(skillItem, testType, additionalConfiguration, {
+      await BlackbirdsDice.rollTest(skillItem, testType, additionalConfiguration, {
         showDialog: true,
       });
     } else {
@@ -611,14 +611,14 @@ export default class ZweihanderBaseActorSheet extends ActorSheet {
   _getHeaderButtons() {
     const buttons = super._getHeaderButtons();
     if (game.user.isGM || !this.actor.limited) {
-      const compactMode = game.settings.get('zweihander', 'openInCompactMode');
+      const compactMode = game.settings.get('blackbirds', 'openInCompactMode');
       buttons.splice(0, 0, {
         label: ' Compact Mode',
         class: 'hide-background',
         icon: `hide-background-toggle fas fa-toggle-${compactMode ? 'on' : 'off'}`,
         onclick: (event) => {
           const sheet = $(event.currentTarget).parents('.sheet');
-          sheet.toggleClass('zweihander-compact-sheet');
+          sheet.toggleClass('blackbirds-compact-sheet');
           $(event.currentTarget)
             .find('.hide-background-toggle')
             .toggleClass('fa-toggle-on')

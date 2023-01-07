@@ -1,4 +1,4 @@
-export default class ZweihanderActorConfig extends FormApplication {
+export default class BlackbirdsActorConfig extends FormApplication {
   static defaultConfiguration = {
     dthAttribute: 'brawn',
     pthAttribute: 'willpower',
@@ -19,14 +19,14 @@ export default class ZweihanderActorConfig extends FormApplication {
     isMagickUser: false,
     permanentChaosRanks: 0,
     permanentOrderRanks: 0,
-    dodgeSound: 'systems/zweihander/assets/sounds/dodge.mp3',
-    parrySound: 'systems/zweihander/assets/sounds/parry.mp3',
-    gruntSound: 'systems/zweihander/assets/sounds/grunt_m.mp3',
+    dodgeSound: 'systems/blackbirds/assets/sounds/dodge.mp3',
+    parrySound: 'systems/blackbirds/assets/sounds/parry.mp3',
+    gruntSound: 'systems/blackbirds/assets/sounds/grunt_m.mp3',
     playGruntSound: true,
   };
 
   static getValue(actorData, key) {
-    const value = getProperty(actorData.flags, `zweihander.actorConfig.${key}`);
+    const value = getProperty(actorData.flags, `blackbirds.actorConfig.${key}`);
     return value ?? this.defaultConfiguration[key];
   }
 
@@ -40,9 +40,9 @@ export default class ZweihanderActorConfig extends FormApplication {
 
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ['zweihander sheet actor-config'],
-      id: 'zweihander_actor_config',
-      template: 'systems/zweihander/src/templates/app/actor-config.hbs',
+      classes: ['blackbirds sheet actor-config'],
+      id: 'blackbirds_actor_config',
+      template: 'systems/blackbirds/src/templates/app/actor-config.hbs',
       submitOnChange: true,
       submitOnClose: true,
       closeOnSubmit: false,
@@ -60,7 +60,7 @@ export default class ZweihanderActorConfig extends FormApplication {
   /** @override */
   getData() {
     const appData = super.getData();
-    appData.flags = ZweihanderActorConfig.getConfig(this.object);
+    appData.flags = BlackbirdsActorConfig.getConfig(this.object);
     appData.parrySkills = appData.flags.parrySkills.join(', ');
     appData.dodgeSkills = appData.flags.dodgeSkills.join(', ');
     appData.magickSkills = appData.flags.magickSkills.join(', ');
@@ -95,7 +95,7 @@ export default class ZweihanderActorConfig extends FormApplication {
         updateData.isIgnoredPerilLadderValue['[2]'],
       ];
       const avoidAllUpdate = foundry.utils.expandObject(formData).avoidAllPeril;
-      const avoidAllBefore = ZweihanderActorConfig.getConfig(this.object.data).isIgnoredPerilLadderValue.reduce(
+      const avoidAllBefore = BlackbirdsActorConfig.getConfig(this.object.data).isIgnoredPerilLadderValue.reduce(
         (a, b) => a && b,
         true
       );
@@ -108,7 +108,7 @@ export default class ZweihanderActorConfig extends FormApplication {
         await actor.update(actorUpdate);
       }
     }
-    await actor.setFlag('zweihander', 'actorConfig', updateData);
+    await actor.setFlag('blackbirds', 'actorConfig', updateData);
     this.render();
   }
 }
